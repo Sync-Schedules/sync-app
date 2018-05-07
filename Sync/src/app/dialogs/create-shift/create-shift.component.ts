@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {UserService} from "../../services/user.service";
 import {AuthService} from "../../services/auth.service";
 import {VenueService} from "../../services/venue.service";
-import {MatSnackBar} from "@angular/material";
+import {MatDialog, MatSnackBar} from "@angular/material";
 
 @Component({
   selector: 'app-create-shift',
@@ -12,7 +12,7 @@ import {MatSnackBar} from "@angular/material";
 })
 export class CreateShiftComponent implements OnInit {
 
-  constructor(private us: UserService, private as: AuthService, private vs: VenueService, private snack:MatSnackBar) { }
+  constructor(private us: UserService, private as: AuthService, private vs: VenueService, private snack:MatSnackBar, private dialog: MatDialog) { }
 
   dj: any;
   venue: any;
@@ -24,6 +24,9 @@ export class CreateShiftComponent implements OnInit {
   dates=[];
   shift: any;
   times= ['9:00' ,'10:00'];
+  minDate = new Date();
+  errorMsg: boolean = false;
+  disable: boolean = false;
 
   ngOnInit() {
 
@@ -64,6 +67,42 @@ export class CreateShiftComponent implements OnInit {
       console.log(this.dates)
 
     }
+  }
+
+  submitShift(){
+
+
+    console.log('yes');
+    console.log(this.date);
+
+    this.shift = {
+      venue: this.venue,
+      date: this.date,
+      time: this.time,
+      dj: this.dj.username,
+    } ;
+
+    if (this.date.getDate() === this.dj.availability[1] ){
+     this.errorMsg = true;
+     this.snack.open("DJ is not available" , '',{duration: 2000})
+    }
+    else{
+
+
+      this.as.addShift(this.shift)
+        .subscribe(data => {
+          if (data.success){
+            this.snack.open('shift has been added!' , 'Cool', {duration: 2000});
+            this.dialog.closeAll();
+            this.ngOnInit();
+          }
+          else{
+            this.snack.open('something went wrong', 'Oh no', {duration: 1000});
+          }
+        })
+
+    }
+    // this.dialog.closeAll();
   }
 
   // myFilter = (d: Date): boolean => {

@@ -14,7 +14,7 @@
     <button mat-button (click)="selectDJ()">Select</button>
       <div fxFlex="50">
         <h3 mat-card-subtitle>Selecting availability for: {{dj.name}} {{dj.last}}</h3>
-        <h4>Blocked dates: <div *ngFor="let date of dates">{{date}} </div></h4>
+        <h4>Blocked dates: <span *ngFor="let date of dates">{{date}} </span></h4>
       </div>
     </div>
   </mat-card-content>
@@ -43,14 +43,20 @@
     </mat-form-field>
 
     <mat-form-field class="example-full-width">
-      <input matInput  [matDatepicker]="picker" placeholder="Choose a date">
+      <input matInput  matInput
+             [matDatepicker]="picker"
+             placeholder="Choose dates"
+             [(ngModel)]="date"
+             (dateInput)="date.getDay()"
+             [min]="minDate.getMonth() +1"
+             name="date" >
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
-      <mat-error *ngIf="dateFormControl.hasError('date')">
-            DJ Is not available on that date
-      </mat-error>
     </mat-form-field>
 
+
+
+    <button mat-button (click)="submitShift()" [disabled]="disable">Submit</button>
 
   </mat-card-content>
 </mat-card>
