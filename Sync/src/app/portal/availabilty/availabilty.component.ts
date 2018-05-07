@@ -13,9 +13,9 @@ export class AvailabiltyComponent implements OnInit {
   constructor(private as: AuthService,  private snackBar: MatSnackBar) { }
 
   user: any;
-  date = new Date().getDay();
+  date = new Date().getDate();
   dates = [];
-  minDate = new Date();
+  minDate = new Date().getMonth()+1;
   // m = new Date().getMonth();
   // maxDate = this.m;
   showDates = [];
@@ -48,10 +48,10 @@ export class AvailabiltyComponent implements OnInit {
     this.disabled = true;
   }
 
-  getDate(date){
+  getAvail(date){
 
     // let month = this.date.getMonth() + 1
-    this.dates.push(date);
+    this.dates.push(date.getDate());
     // this.showDates.push(month + '/'+ date.getDate() + '/' + date.getFullYear());
     console.log('Date selected: ' + this.date);
     console.log('Dates selected: ' +this.dates);
@@ -80,5 +80,7 @@ export class AvailabiltyComponent implements OnInit {
         }
       });
     console.log(this.user)
-    }
+    this.ngOnInit()
+
+  }
 }

@@ -65,7 +65,7 @@ export class AddUserComponent implements OnInit {
 
     console.log('!!!!MAILING!!!' + this.name, this.last, this.role);
     this.mail.sendEmail(mail).subscribe(data => {
-      console.log(mail);
+      // console.log(mail);
       //
       // if (data.success) {
       //   this.snackBar.open('Email Sent', '', {duration: 3000});

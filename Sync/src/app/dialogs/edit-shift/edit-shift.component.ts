@@ -1,6 +1,7 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { AuthService } from "../../services/auth.service";
 import { MAT_DIALOG_DATA, MatDialog, MatDialogRef, MatSnackBar } from "@angular/material";
+
 @Component({
   selector: 'app-edit-shift',
   templateUrl: './edit-shift.component.html',
@@ -21,13 +22,13 @@ export class EditShiftComponent implements OnInit {
     _id: string;
 
     ngOnInit() {
-        this.as.getShift().subscribe(shift => {
+        this.as.getShifts().subscribe(shift => {
             this.venue = shift.venue;
         },
             err => {
                 console.log(err);
                 return false;
-            });  
+            });
   }
 
 }

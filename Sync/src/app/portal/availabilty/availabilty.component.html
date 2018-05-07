@@ -21,7 +21,7 @@
                    [matDatepicker]="picker"
                    placeholder="Choose dates"
                    [(ngModel)]="date"
-                   (dateInput)="getDate(date)"
+                   (dateInput)="getAvail(date)"
                    [disabled]="disabled"
                    [min]="minDate"
                    name="date" >
@@ -37,7 +37,7 @@
       <mat-card class="profile-attribute" fxFlex>
         <mat-card class="profile-attribute"  *ngFor="let date of dates" style="width: 95%; background-color: white">
           {{date}} <span class="example-spacer"> </span>
-          <button mat-icon-button (click)="dropDate(date)"><mat-icon>clear</mat-icon></button>
+          <button mat-icon-button><mat-icon>clear</mat-icon></button>
         </mat-card>
       </mat-card>
     </mat-card>

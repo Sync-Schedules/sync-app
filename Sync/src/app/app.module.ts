@@ -61,11 +61,12 @@ import { ShiftsComponent } from './portal/shifts/shifts.component';
 import { AvailabiltyComponent} from "./portal/availabilty/availabilty.component";
 import { CalWeekComponent } from './shared/cal-week/cal-week.component';
 import { SelectDjComponent } from './dialogs/select-dj/select-dj.component';
-import { HelpComponent } from './help/help.component';
-import { ResetPasswordComponent } from './reset-password/reset-password.component';
+// import { HelpComponent } from './help/help.component';
+// import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { CalendarModule } from 'angular-calendar';
-import {MasterCalendarModule} from "./master-calendar/master-calendar.module";
+// import {MasterCalendarModule} from "./master-calendar/master-calendar.module";
 import {MatMomentDateModule} from "@angular/material-moment-adapter";
+import {EditShiftComponent} from "./dialogs/edit-shift/edit-shift.component";
 
 @NgModule({
   declarations: [
@@ -96,8 +97,10 @@ import {MatMomentDateModule} from "@angular/material-moment-adapter";
     CalWeekComponent,
     ViewAvailability,
     SelectDjComponent,
-    HelpComponent,
-    ResetPasswordComponent,
+    EditShiftComponent,
+
+    // HelpComponent,
+    // ResetPasswordComponent,
 
   ],
   imports: [
@@ -138,8 +141,8 @@ import {MatMomentDateModule} from "@angular/material-moment-adapter";
     MatRadioModule,
     MatSlideToggleModule,
     CalendarModule.forRoot(),
-    MasterCalendarModule,
-    MatMomentDateModule
+    // MasterCalendarModule,
+    // MatMomentDateModule
   ],
   providers: [
     FormBuilder,
