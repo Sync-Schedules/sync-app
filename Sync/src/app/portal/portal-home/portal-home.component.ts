@@ -73,8 +73,8 @@ export class PortalHomeComponent implements OnInit {
         return false;
       });
 
-    console.log(this.dayName);
-    console.log(this.currentDate);
+    // console.log(this.dayName);
+    // console.log(this.currentDate);
     this.generateWeek();
 
     this.emptyshifts.length=0;

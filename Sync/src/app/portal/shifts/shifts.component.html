@@ -4,8 +4,8 @@
       <mat-icon matPrefix>search</mat-icon>
       <input matInput (keyup)="applyFilter($event.target.value)" label="Filter">
     </mat-form-field>
-    <div *ngIf="user?.role === 'Admin'">
-      <button mat-mini-fab (click)="openDialog()"><mat-icon>add</mat-icon></button>
+    <div *ngIf="user?.role === 'Admin' || user?.role === 'Manager' ">
+      <button mat-mini-fab (click)="openCreate()"><mat-icon>add</mat-icon></button>
     </div>
   </div>
   <div class="example-container mat-elevation-z8">

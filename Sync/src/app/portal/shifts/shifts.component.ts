@@ -9,6 +9,7 @@ import {AddShiftComponent} from "../../dialogs/add-shift/add-shift.component";
 import {ConfirmDialogComponent} from "../../dialogs/delete-dialog/confirm-dialog.component";
 import {EditUserComponent} from "../../dialogs/edit-user/edit-user.component";
 import {SelectDjComponent} from "../../dialogs/select-dj/select-dj.component";
+import {CreateShiftComponent} from "../../dialogs/create-shift/create-shift.component";
 
 
 @Component({
@@ -77,6 +78,10 @@ export class ShiftsComponent implements OnInit {
   openDialog(): void {
     let dialogRef = this.dialog.open(AddShiftComponent, {width: '500px'});
 
+  }
+
+  openCreate(): void {
+    let dialogRef = this.dialog.open(CreateShiftComponent );
   }
 
   onRowClicked(row){

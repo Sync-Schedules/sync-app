@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d3d585c5-93ba-445d-a597-1cd8ea97aa3e" name="Default" comment="Merge origin/master">
+    <list default="true" id="d3d585c5-93ba-445d-a597-1cd8ea97aa3e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sync/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Sync/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Sync/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Sync/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sync/src/app/dialogs/add-user/add-user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Sync/src/app/dialogs/add-user/add-user.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sync/src/app/dialogs/edit-shift/edit-shift.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Sync/src/app/dialogs/edit-shift/edit-shift.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sync/src/app/portal/availabilty/availabilty.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Sync/src/app/portal/availabilty/availabilty.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sync/src/app/portal/availabilty/availabilty.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Sync/src/app/portal/availabilty/availabilty.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/models/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sync-node.iml" beforeDir="false" afterPath="$PROJECT_DIR$/sync-node.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sync/src/app/portal/portal-home/portal-home.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Sync/src/app/portal/portal-home/portal-home.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sync/src/app/portal/shifts/shifts.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/Sync/src/app/portal/shifts/shifts.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sync/src/app/portal/shifts/shifts.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Sync/src/app/portal/shifts/shifts.component.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,19 +21,89 @@
       <file leaf-file-name="user.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/models/user.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="15" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="15" />
+            <state relative-caret-position="527">
+              <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="availabilty.component.ts" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Sync/src/app/portal/availabilty/availabilty.component.ts">
+      <file leaf-file-name="schedule.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Sync/src/app/portal/schedule/schedule.component.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
-              <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+            <state relative-caret-position="-106" />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shifts.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Sync/src/app/portal/shifts/shifts.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="69" lean-forward="true" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="shifts.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Sync/src/app/portal/shifts/shifts.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="83" column="57" selection-start-line="83" selection-start-column="57" selection-end-line="83" selection-end-column="57" />
+              <folding>
+                <element signature="e#0#59#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create-shift.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Sync/src/app/dialogs/create-shift/create-shift.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="15" column="70" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create-shift.component.ts" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Sync/src/app/dialogs/create-shift/create-shift.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="428">
+              <caret line="70" column="28" lean-forward="true" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
               <folding>
                 <element signature="e#0#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add-shift.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Sync/src/app/dialogs/add-shift/add-shift.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="80" column="3" lean-forward="true" selection-start-line="75" selection-start-column="3" selection-end-line="80" selection-end-column="3" />
+              <folding>
+                <element signature="e#0#56#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="add-shift.component.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Sync/src/app/dialogs/add-shift/add-shift.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="323">
+              <caret line="19" column="21" lean-forward="true" selection-start-line="4" selection-end-line="19" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="portal-home.component.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Sync/src/app/portal/portal-home/portal-home.component.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="77" column="24" selection-start-line="77" selection-start-column="24" selection-end-line="77" selection-end-column="24" />
+              <folding>
+                <element signature="e#0#92#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -46,20 +112,11 @@
       <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sync/src/app/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="145" column="4" lean-forward="true" selection-start-line="145" selection-start-column="4" selection-end-line="145" selection-end-column="4" />
+            <state relative-caret-position="462">
+              <caret line="166" column="24" selection-start-line="166" selection-start-column="24" selection-end-line="166" selection-end-column="24" />
               <folding>
                 <element signature="e#0#56#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="availabilty.component.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Sync/src/app/portal/availabilty/availabilty.component.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" column="16" selection-start-line="38" selection-start-column="16" selection-end-line="38" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -93,9 +150,14 @@
         <option value="$PROJECT_DIR$/routes/users.js" />
         <option value="$PROJECT_DIR$/config/passport.js" />
         <option value="$PROJECT_DIR$/Sync/src/app/portal/availabilty/availabilty.component.html" />
-        <option value="$PROJECT_DIR$/models/user.js" />
-        <option value="$PROJECT_DIR$/Sync/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/Sync/src/app/portal/availabilty/availabilty.component.ts" />
+        <option value="$PROJECT_DIR$/Sync/src/app/portal/portal-home/portal-home.component.ts" />
+        <option value="$PROJECT_DIR$/Sync/src/app/portal/shifts/shifts.component.html" />
+        <option value="$PROJECT_DIR$/Sync/src/app/app.module.ts" />
+        <option value="$PROJECT_DIR$/Sync/src/app/portal/shifts/shifts.component.ts" />
+        <option value="$PROJECT_DIR$/Sync/src/app/dialogs/create-shift/create-shift.component.html" />
+        <option value="$PROJECT_DIR$/models/user.js" />
+        <option value="$PROJECT_DIR$/Sync/src/app/dialogs/create-shift/create-shift.component.ts" />
       </list>
     </option>
   </component>
@@ -169,6 +231,32 @@
               <item name="Sync" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="dialogs" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sync-node" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sync-node" type="462c0819:PsiDirectoryNode" />
+              <item name="Sync" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="dialogs" type="462c0819:PsiDirectoryNode" />
+              <item name="add-shift" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sync-node" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sync-node" type="462c0819:PsiDirectoryNode" />
+              <item name="Sync" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="dialogs" type="462c0819:PsiDirectoryNode" />
+              <item name="create-shift" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sync-node" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sync-node" type="462c0819:PsiDirectoryNode" />
+              <item name="Sync" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="portal" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -179,6 +267,24 @@
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="portal" type="462c0819:PsiDirectoryNode" />
               <item name="availabilty" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sync-node" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sync-node" type="462c0819:PsiDirectoryNode" />
+              <item name="Sync" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="portal" type="462c0819:PsiDirectoryNode" />
+              <item name="portal-home" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sync-node" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sync-node" type="462c0819:PsiDirectoryNode" />
+              <item name="Sync" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="portal" type="462c0819:PsiDirectoryNode" />
+              <item name="shifts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -293,12 +399,20 @@
       <workItem from="1520886282185" duration="10969000" />
       <workItem from="1521142421871" duration="84000" />
       <workItem from="1521274150391" duration="2624000" />
-      <workItem from="1525726070836" duration="1692000" />
+      <workItem from="1525726070836" duration="5587000" />
     </task>
+    <task id="LOCAL-00001" summary="Merge origin/master">
+      <created>1525728196878</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1525728196878</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32956000" />
+    <option name="totallyTimeSpent" value="36851000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -315,11 +429,11 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.26821542" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.26821542" />
       <window_info id="Capture Tool" order="2" />
       <window_info anchor="bottom" id="TypeScript" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26927084" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26927084" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24963397" />
@@ -372,56 +486,11 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Merge origin/master" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge origin/master" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/models/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="20" selection-end-line="59" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/passport.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="21" selection-end-line="22" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="4" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/users.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="28" selection-start-line="11" selection-start-column="28" selection-end-line="11" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="48" column="7" selection-start-line="48" selection-start-column="7" selection-end-line="48" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/passport.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -650,13 +719,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/user.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="15" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Sync/src/app/portal/availabilty/availabilty.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
@@ -664,20 +726,102 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Sync/src/app/portal/availabilty/availabilty.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="547">
+          <caret line="83" selection-start-line="83" selection-end-line="83" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sync/src/app/portal/schedule/schedule.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2411">
+          <folding>
+            <element signature="e#0#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sync/src/app/portal/portal-home/portal-home.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="77" column="24" selection-start-line="77" selection-start-column="24" selection-end-line="77" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#92#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Sync/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="145" column="4" lean-forward="true" selection-start-line="145" selection-start-column="4" selection-end-line="145" selection-end-column="4" />
+        <state relative-caret-position="462">
+          <caret line="166" column="24" selection-start-line="166" selection-start-column="24" selection-end-line="166" selection-end-column="24" />
           <folding>
             <element signature="e#0#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sync/src/app/portal/availabilty/availabilty.component.ts">
+    <entry file="file://$PROJECT_DIR$/Sync/src/app/portal/shifts/shifts.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
-          <caret line="83" lean-forward="true" selection-start-line="83" selection-end-line="83" />
+        <state relative-caret-position="323">
+          <caret line="83" column="57" selection-start-line="83" selection-start-column="57" selection-end-line="83" selection-end-column="57" />
+          <folding>
+            <element signature="e#0#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sync/src/app/portal/shifts/shifts.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="69" lean-forward="true" selection-start-line="15" selection-start-column="69" selection-end-line="15" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sync/src/app/dialogs/add-shift/add-shift.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="21" lean-forward="true" selection-start-line="4" selection-end-line="19" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sync/src/app/dialogs/add-shift/add-shift.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="80" column="3" lean-forward="true" selection-start-line="75" selection-start-column="3" selection-end-line="80" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sync/src/app/portal/schedule/schedule.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-106" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sync/src/app/dialogs/create-shift/create-shift.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="70" selection-start-line="15" selection-start-column="70" selection-end-line="15" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/user.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sync/src/app/dialogs/create-shift/create-shift.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="70" column="28" lean-forward="true" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>

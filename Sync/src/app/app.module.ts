@@ -67,6 +67,7 @@ import { CalendarModule } from 'angular-calendar';
 // import {MasterCalendarModule} from "./master-calendar/master-calendar.module";
 import {MatMomentDateModule} from "@angular/material-moment-adapter";
 import {EditShiftComponent} from "./dialogs/edit-shift/edit-shift.component";
+import { CreateShiftComponent } from './dialogs/create-shift/create-shift.component';
 
 @NgModule({
   declarations: [
@@ -98,6 +99,7 @@ import {EditShiftComponent} from "./dialogs/edit-shift/edit-shift.component";
     ViewAvailability,
     SelectDjComponent,
     EditShiftComponent,
+    CreateShiftComponent,
 
     // HelpComponent,
     // ResetPasswordComponent,
@@ -161,7 +163,8 @@ import {EditShiftComponent} from "./dialogs/edit-shift/edit-shift.component";
     EditUserComponent,
     EditVenueComponent,
     AddShiftComponent,
-    SelectDjComponent
+    SelectDjComponent,
+    CreateShiftComponent
   ]
 })
 export class AppModule { }
