@@ -20,12 +20,13 @@
     </mat-form-field>
 
     <mat-form-field class="example-full-width">
-      <mat-select placeholder="Select a DJ" [(ngModel)]="data.dj" name="role" required="required">
-        <mat-option *ngFor="let dj of djs" [value]="dj">
+      <mat-select placeholder="Select a DJ" [(ngModel)]="data.dj" name="dj" required="required">
+        <mat-option [disabled]="dateClicked == !dj.availability" *ngFor="let dj of djs" [value]="dj">
           {{dj}}
         </mat-option>
       </mat-select>
     </mat-form-field>
+
 
 
   </mat-dialog-content>

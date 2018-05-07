@@ -21,7 +21,7 @@ export interface CalendarDate {
 })
 export class SyncCalendarComponent implements OnInit, OnChanges {
 
-    currentDate = moment();
+  currentDate = moment();
   dayNames = ['S', 'M', 'T', 'W', 'T', 'F', 'S'];
   weeks: CalendarDate[][] = [];
   sortedDates: CalendarDate[] = [];
@@ -51,6 +51,10 @@ export class SyncCalendarComponent implements OnInit, OnChanges {
 
 
   ngOnInit(): void {
+
+    this.as.getProfile().subscribe(data => this.user = data.user);
+
+
     this.generateCalendar();
 
     this.vs.getVenue().subscribe(VenueData =>{
@@ -225,7 +229,7 @@ export class SyncCalendarComponent implements OnInit, OnChanges {
     this.user = {
       dj: this.dj,
       venue: this.venue,
-      date: this.dateClicked,
+      date: this.currentDate,
       time: this.time
     } ;
     this.id = this.user._id;

@@ -29,7 +29,7 @@
                 <mat-card class="date-text">
                   <mat-card-header>
                     {{ day.mDate.date() }}<span fxFlex></span>
-                    <button mat-icon-button (click)="addShift()" color="accent">
+                    <button *ngIf="user?.role === 'Manager'" mat-icon-button (click)="addShift()" color="accent">
                       <mat-icon>add</mat-icon>
                     </button>
                   </mat-card-header>
