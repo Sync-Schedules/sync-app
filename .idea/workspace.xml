@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d3d585c5-93ba-445d-a597-1cd8ea97aa3e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/Sync/src/app/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Sync/src/app/services/auth.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,17 +18,17 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
+            <state relative-caret-position="527">
               <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+            <state relative-caret-position="85">
+              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -76,7 +77,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="auth.service.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="auth.service.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sync/src/app/services/auth.service.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
@@ -88,11 +89,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="shifts.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/shifts.js">
+      <file leaf-file-name="mailer.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routes/mailer.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="29" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="29" />
+            <state relative-caret-position="481">
+              <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -148,8 +155,8 @@
         <option value="$PROJECT_DIR$/Sync/src/app/services/venue.service.ts" />
         <option value="$PROJECT_DIR$/config/database.js" />
         <option value="$PROJECT_DIR$/app.js" />
-        <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/Sync/src/app/services/auth.service.ts" />
+        <option value="$PROJECT_DIR$/package.json" />
       </list>
     </option>
   </component>
@@ -196,159 +203,6 @@
               <item name="sync-node" type="b2602c69:ProjectViewProjectNode" />
               <item name="sync-node" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="sync-node" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sync-node" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sync-node" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sync-node" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sync-node" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sync-node" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sync-node" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sync-node" type="462c0819:PsiDirectoryNode" />
-              <item name="Sync" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sync-node" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sync-node" type="462c0819:PsiDirectoryNode" />
-              <item name="Sync" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sync-node" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sync-node" type="462c0819:PsiDirectoryNode" />
-              <item name="Sync" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sync-node" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sync-node" type="462c0819:PsiDirectoryNode" />
-              <item name="Sync" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="dialogs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sync-node" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sync-node" type="462c0819:PsiDirectoryNode" />
-              <item name="Sync" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="dialogs" type="462c0819:PsiDirectoryNode" />
-              <item name="add-shift" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sync-node" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sync-node" type="462c0819:PsiDirectoryNode" />
-              <item name="Sync" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="dialogs" type="462c0819:PsiDirectoryNode" />
-              <item name="create-shift" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sync-node" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sync-node" type="462c0819:PsiDirectoryNode" />
-              <item name="Sync" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sync-node" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sync-node" type="462c0819:PsiDirectoryNode" />
-              <item name="Sync" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="portal" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sync-node" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sync-node" type="462c0819:PsiDirectoryNode" />
-              <item name="Sync" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="portal" type="462c0819:PsiDirectoryNode" />
-              <item name="availabilty" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sync-node" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sync-node" type="462c0819:PsiDirectoryNode" />
-              <item name="Sync" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="portal" type="462c0819:PsiDirectoryNode" />
-              <item name="djs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sync-node" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sync-node" type="462c0819:PsiDirectoryNode" />
-              <item name="Sync" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="portal" type="462c0819:PsiDirectoryNode" />
-              <item name="portal-home" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sync-node" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sync-node" type="462c0819:PsiDirectoryNode" />
-              <item name="Sync" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="portal" type="462c0819:PsiDirectoryNode" />
-              <item name="schedule" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sync-node" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sync-node" type="462c0819:PsiDirectoryNode" />
-              <item name="Sync" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="portal" type="462c0819:PsiDirectoryNode" />
-              <item name="shifts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sync-node" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sync-node" type="462c0819:PsiDirectoryNode" />
-              <item name="Sync" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="register" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sync-node" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sync-node" type="462c0819:PsiDirectoryNode" />
-              <item name="Sync" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="services" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sync-node" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sync-node" type="462c0819:PsiDirectoryNode" />
-              <item name="Sync" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="shared" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="sync-node" type="b2602c69:ProjectViewProjectNode" />
-              <item name="sync-node" type="462c0819:PsiDirectoryNode" />
-              <item name="Sync" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="shared" type="462c0819:PsiDirectoryNode" />
-              <item name="sync-calendar" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -382,9 +236,12 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="UPDATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/Sync/src/app/dialogs/create-shift/create-shift.component.ts</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Sync/src/app/portal/nav/nav.component.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Sync/src/app/portal/shifts/shifts.component.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Sync/src/app/portal/shifts/shifts.component.ts</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Sync/src/app/services/mailer.service.ts</PATH>
           <PATH vcs="Git" revision="">$PROJECT_DIR$/models/shift.js</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/routes/shifts.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/routes/mailer.js</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Created" />
@@ -392,10 +249,6 @@
           <option name="mySupportsDeletion" value="false" />
           <option name="myCanBeAbsent" value="false" />
           <option name="myId" value="CREATED" />
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.vs/ProjectSettings.json</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.vs/config/applicationhost.config</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.vs/slnx.sqlite</PATH>
-          <PATH vcs="Git" revision="">$PROJECT_DIR$/.vs/sync-app/v15/.suo</PATH>
         </FILE-GROUP>
         <FILE-GROUP>
           <option name="myUpdateName" value="Deleted" />
@@ -578,7 +431,7 @@
       <workItem from="1520886282185" duration="10969000" />
       <workItem from="1521142421871" duration="84000" />
       <workItem from="1521274150391" duration="2624000" />
-      <workItem from="1525726070836" duration="30438000" />
+      <workItem from="1525726070836" duration="31747000" />
     </task>
     <task id="LOCAL-00001" summary="Merge origin/master">
       <created>1525728196878</created>
@@ -640,7 +493,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61702000" />
+    <option name="totallyTimeSpent" value="63011000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -995,17 +848,6 @@
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/mailer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/schedules.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1037,25 +879,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Sync/package.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Sync/app.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/package.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="4" lean-forward="true" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/package-lock.json">
       <provider selected="true" editor-type-id="text-editor">
@@ -1069,6 +897,33 @@
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/mailer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="38" column="5" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="40" column="39" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
         </state>
       </provider>
     </entry>
