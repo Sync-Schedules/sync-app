@@ -38,7 +38,8 @@ export class ShiftsComponent implements OnInit {
                private us: UserService,
                private as: AuthService,
                private snackBar: MatSnackBar,
-               private router: Router) { }
+               private router: Router,
+               private mailer: MailerService) { }
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
@@ -208,31 +209,14 @@ export class ShiftsComponent implements OnInit {
 
   }
 
-  sendSchedule(user) {
-      const mail = {
-          venue: this.venue,
-          date: this.date,
-          dj: this.dj,
-          time: this.time,
-        
-      };
+  sendSchedule() {
 
-      console.log('!!!!MAILING!!!' + this.dj, this.date, this.dj);
-      this.mail.sendSchedule(mail).subscribe(data => {
-          // console.log(mail);
-          //
-          // if (data.success) {
-          //   this.snackBar.open('Email Sent', '', {duration: 3000});
-          //   this.dialog.closeAll();
-          //   console.log(mail);
-          // } else {
-          //   this.snackBar.open('Something went wrong', 'try again', {duration: 3000});
-          // }
-      });
+
+      this.mailer.sendSchedule()
   }
 
   }
- 
+
 
 
 

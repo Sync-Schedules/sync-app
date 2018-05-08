@@ -20,11 +20,11 @@ export class MailerService {
   }
 
 
-  sendSchedule(user) {
-      let data = { user };
-      let body = JSON.stringify(data);
+  sendSchedule() {
+
+
       let headers = new Headers();
       headers.append('Content-Type', 'application/json');
-      return this.http.post('http://localhost:3000/mailer/sendSchedule', body, { headers: headers })
+      return this.http.post('mailer/sendSchedule', { headers: headers })
   }
 }

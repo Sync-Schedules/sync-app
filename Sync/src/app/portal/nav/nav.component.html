@@ -1,7 +1,7 @@
 <mat-toolbar class="portal-bar" color="primary" [ngStyle]="{'background-color': getColor(user?.role)}"><span>{{user?.role}}</span></mat-toolbar>
 
 <mat-tab-group>
-  <mat-tab label="HOME" *ngIf="user?.role === 'Manager' || user?.role === 'DJ'"><app-portal-home></app-portal-home></mat-tab>
+  <!--<mat-tab label="HOME" *ngIf="user?.role === 'Manager' || user?.role === 'DJ'"><app-portal-home></app-portal-home></mat-tab>-->
   <mat-tab label="USERS" *ngIf="user?.role === 'Admin'"><usertable></usertable></mat-tab>
   <mat-tab label="SCHEDULE" *ngIf="user?.role === 'Manager' || user?.role === 'DJ'"><app-schedule></app-schedule></mat-tab>
   <mat-tab label="DJ AVAILABILITY" *ngIf="user?.role === 'Manager'"><view-avail></view-avail></mat-tab>

@@ -68,6 +68,7 @@ import { CalendarModule } from 'angular-calendar';
 import {MatMomentDateModule} from "@angular/material-moment-adapter";
 import {EditShiftComponent} from "./dialogs/edit-shift/edit-shift.component";
 import { CreateShiftComponent } from './dialogs/create-shift/create-shift.component';
+import {MailerService} from "./services/mailer.service";
 
 @NgModule({
   declarations: [
@@ -153,7 +154,8 @@ import { CreateShiftComponent } from './dialogs/create-shift/create-shift.compon
     AuthGuard,
     AdminGuard,
     UserService,
-    JwtHelper
+    JwtHelper,
+    MailerService
   ],
   bootstrap: [AppComponent],
   entryComponents: [

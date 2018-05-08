@@ -117,9 +117,9 @@ router.post('/sendSchedule', function (req, res, next) {
 
         let mailOptions = {
             from: '"Sync Schedules" <syncscheduleteam@gmail.com>',
-            to: recipient,
+            to: 'zmurphy74@yahoo.com',
             cc: 'syncscheduleteam@gmail.com',
-            subject: 'Account Created',
+            subject: 'Schedule Created',
             html: htmlBody
         };
 
