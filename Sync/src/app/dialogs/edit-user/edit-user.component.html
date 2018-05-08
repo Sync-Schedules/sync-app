@@ -33,6 +33,12 @@
       </mat-select>
     </mat-form-field>
 
+    <button mat-button (click)="changePassword()">Change password</button>
+
+    <mat-form-field class="example-full-width" *ngIf="open == true" >
+      <input matInput type="text" [value]="data.password" [(ngModel)] = "data.password" placeholder="password">
+    </mat-form-field>
+
   </mat-dialog-content>
   <mat-dialog-actions fxLayoutAlign="center center">
     <button mat-raised-button type="submit" [mat-dialog-close]="data">Submit</button>

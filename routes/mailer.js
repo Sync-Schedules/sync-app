@@ -98,7 +98,7 @@ router.post('/sendSchedule', function (req, res, next) {
         '</tr>' +
         '</table>' +
         '<h2>Click here to log in and change your password</h2>' +
-        '<a href="http://localhost:4200/resetPassword" style="padding: 16px;background-color: white;color: #0BA5DB; border: 2px solid #0BA5DB;text-decoration: none;">Change Password</a>' +
+        '<a href="https://sync-schedules.herokuapp.com/login" style="padding: 16px;background-color: white;color: #0BA5DB; border: 2px solid #0BA5DB;text-decoration: none;">Change Password</a>' +
         '</div>' +
         '</div>'
         ;

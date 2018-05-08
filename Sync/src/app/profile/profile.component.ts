@@ -60,6 +60,8 @@ export class ProfileComponent implements OnInit {
 this.checked= !this.checked
   }
 
+
+
   updateUser(user){
 
     console.log(user, user._id, user.name, user.last);
@@ -71,6 +73,7 @@ this.checked= !this.checked
         last: user.last,
         username: user.username,
         email: user.email,
+        password: user.password
 
       }
     });

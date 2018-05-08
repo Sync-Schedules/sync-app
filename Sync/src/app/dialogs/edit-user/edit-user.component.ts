@@ -22,6 +22,8 @@ export class EditUserComponent implements OnInit{
   username: string;
   email: string;
   role: string;
+  password: any;
+  open: boolean = false;
   _id: string;
 
 
@@ -35,6 +37,10 @@ export class EditUserComponent implements OnInit{
     {value: 'Manager', viewValue: 'Manager'},
     {value: 'DJ', viewValue: 'DJ'}
   ];
+
+  changePassword() {
+  this.open = true;
+  }
 
   ngOnInit() {
 
