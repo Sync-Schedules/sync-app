@@ -3603,19 +3603,22 @@ var AuthService = (function () {
     AuthService.prototype.registerUser = function (user) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/users/register', user, { headers: headers })
+        // return this.http.post('http://localhost:3000/users/register', user, {headers: headers})
+        return this.http.post('http://sync-schedules.herokuapp.com/users/register', user, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.addVenue = function (venue) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/venues/addVenue', venue, { headers: headers })
+        // return this.http.post('http://localhost:3000/venues/addVenue', venue, {headers: headers})
+        return this.http.post('venues/addVenue', venue, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.addShift = function (shift) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/shifts/createshift', shift, { headers: headers })
+        // return this.http.post('http://localhost:3000/shifts/createshift', shift, {headers: headers})
+        return this.http.post('shifts/createshift', shift, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     //READ
@@ -3624,38 +3627,45 @@ var AuthService = (function () {
         this.loadToken();
         headers.append('Authorization', this.authToken);
         headers.append('Content-Type', 'application/json');
-        return this.http.get('http://localhost:3000/users/profile', { headers: headers })
+        // return this.http.get('http://localhost:3000/users/profile', {headers: headers})
+        return this.http.get('users/profile', { headers: headers })
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.getUsers = function () {
-        return this.http.get('http://localhost:3000/users/usersList')
+        // return this.http.get('http://localhost:3000/users/usersList')
+        return this.http.get('users/usersList')
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.getDJ = function () {
-        return this.http.get('http://localhost:3000/users/djs')
+        // return this.http.get('http://localhost:3000/users/djs')
+        return this.http.get('users/djs')
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.getShifts = function () {
-        return this.http.get('http://localhost:3000/shifts/shifts')
+        // return this.http.get('http://localhost:3000/shifts/shifts')
+        return this.http.get('shifts/shifts')
             .map(function (res) { return res.json(); });
     };
     //UPDATE
     AuthService.prototype.updateUser = function (id, body) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.put('http://localhost:3000/users/update/' + id, body, { headers: headers })
+        // return this.http.put('http://localhost:3000/users/update/'+id,body,{headers:headers})
+        return this.http.put('users/update/' + id, body, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.updateVenue = function (id, body) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.put('http://localhost:3000/venues/update/' + id, body, { headers: headers })
+        // return this.http.put('http://localhost:3000/venues/update/'+id,body,{headers:headers})
+        return this.http.put('venues/update/' + id, body, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.updateShift = function (id, body) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.put('http://localhost:3000/shifts/update/' + id, body, { headers: headers })
+        // return this.http.put('http://localhost:3000/shifts/update/'+id,body,{headers:headers})
+        return this.http.put('venues/update/' + id, body, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     // dropShift(id, body){
@@ -3668,22 +3678,26 @@ var AuthService = (function () {
     // }
     //DELETE
     AuthService.prototype.deleteVenue = function (id) {
-        return this.http.delete('http://localhost:3000/venues/venue/' + id)
+        // return this.http.delete('http://localhost:3000/venues/venue/'+id)
+        return this.http.delete('venues/venue/' + id)
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.deleteUser = function (id) {
-        return this.http.delete('http://localhost:3000/users/user/' + id)
+        // return this.http.delete('http://localhost:3000/users/user/'+id)
+        return this.http.delete('users/user/' + id)
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.deleteShift = function (id) {
-        return this.http.delete('http://localhost:3000/shifts/delete/' + id)
+        // return this.http.delete('http://localhost:3000/shifts/delete/'+id)
+        return this.http.delete('shifts/delete/' + id)
             .map(function (res) { return res.json(); });
     };
     //AUTH
     AuthService.prototype.authenticateUser = function (user) {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/users/authenticate', user, { headers: headers })
+        // return this.http.post('http://localhost:3000/users/authenticate', user, {headers: headers})
+        return this.http.post('users/authenticate', user, { headers: headers })
             .map(function (res) { return res.json(); });
     };
     AuthService.prototype.isAuthenticated = function () {
@@ -3748,7 +3762,8 @@ var MailerService = (function () {
         var body = JSON.stringify(data);
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/mailer/registration', body, { headers: headers });
+        // return this.http.post('http://localhost:3000/mailer/registration',body,{headers:headers})
+        return this.http.post('mailer/registration', body, { headers: headers });
     };
     MailerService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
@@ -3782,9 +3797,12 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var UserService = (function () {
     function UserService(http) {
         this.http = http;
-        this.serviceUrl = 'http://localhost:3000/users/users';
-        this.DjsURL = 'http://localhost:3000/users/djs';
-        this.shiftUrl = 'http://localhost:3000/shifts/shifts';
+        // private serviceUrl = 'http://localhost:3000/users/users';
+        // private DjsURL = 'http://localhost:3000/users/djs';
+        // private shiftUrl='http://localhost:3000/shifts/shifts';
+        this.serviceUrl = 'users/users';
+        this.DjsURL = 'users/djs';
+        this.shiftUrl = 'shifts/shifts';
     }
     UserService.prototype.getUser = function () {
         return this.http.get(this.serviceUrl);
@@ -3870,7 +3888,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var VenueService = (function () {
     function VenueService(http) {
         this.http = http;
-        this.serviceUrl = 'http://localhost:3000/venues/venues';
+        // private serviceUrl = 'http://localhost:3000/venues/venues';
+        this.serviceUrl = 'venues/venues';
     }
     VenueService.prototype.getVenue = function () {
         return this.http.get(this.serviceUrl);
