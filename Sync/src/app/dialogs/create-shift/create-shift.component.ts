@@ -3,6 +3,7 @@ import {UserService} from "../../services/user.service";
 import {AuthService} from "../../services/auth.service";
 import {VenueService} from "../../services/venue.service";
 import {MatDialog, MatSnackBar} from "@angular/material";
+import {current} from "codelyzer/util/syntaxKind";
 
 @Component({
   selector: 'app-create-shift',
@@ -27,6 +28,7 @@ export class CreateShiftComponent implements OnInit {
   minDate = new Date();
   errorMsg: boolean = false;
   disable: boolean = false;
+  blocked:number;
 
   ngOnInit() {
 
@@ -64,14 +66,29 @@ export class CreateShiftComponent implements OnInit {
     this.open = true;
     for(let i = 0; i<this.dj.availability.length;i++){
           this.dates.push(this.dj.availability[i]);
-      console.log(this.dates)
+      console.log(this.dates);
+      }
 
-    }
+    this.dj.availability.forEach(function (value) {
+      console.log("V   " + value);
+
+    });
+
   }
+
+
+
 
   submitShift(){
 
+    let d = this.date.getDate();
 
+    function isBelow31(currentValue){
+      return currentValue !== d;
+    }
+
+
+    console.log('every: ' + this.dj.availability.every(isBelow31));
     console.log('yes');
     console.log(this.date);
 
@@ -82,26 +99,30 @@ export class CreateShiftComponent implements OnInit {
       dj: this.dj.username,
     } ;
 
-    if (this.date.getDate() === this.dj.availability[1] ){
-     this.errorMsg = true;
-     this.snack.open("DJ is not available" , '',{duration: 2000})
-    }
-    else{
 
 
-      this.as.addShift(this.shift)
-        .subscribe(data => {
-          if (data.success){
-            this.snack.open('shift has been added!' , 'Cool', {duration: 2000});
-            this.dialog.closeAll();
-            this.ngOnInit();
-          }
-          else{
-            this.snack.open('something went wrong', 'Oh no', {duration: 1000});
-          }
-        })
+      if (this.dj.availability.every(isBelow31) !== true)
+      {
+        this.errorMsg = true;
+        this.snack.open("DJ is not available" , '',{duration: 2000})
+      }
+      else{
 
-    }
+
+        this.as.addShift(this.shift)
+          .subscribe(data => {
+            if (data.success){
+              this.snack.open('shift has been added!' , 'Cool', {duration: 2000});
+              this.dialog.closeAll();
+              this.ngOnInit();
+            }
+            else{
+              this.snack.open('something went wrong', 'Oh no', {duration: 1000});
+            }
+          })
+
+      }
+
     // this.dialog.closeAll();
   }
 

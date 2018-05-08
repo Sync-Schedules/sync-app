@@ -11,13 +11,17 @@
         </mat-option>
       </mat-select>
     </mat-form-field>
-    <button mat-button (click)="selectDJ()">Select</button>
-      <div fxFlex="50">
-        <h3 mat-card-subtitle>Selecting availability for: {{dj.name}} {{dj.last}}</h3>
-        <h4>Blocked dates: <span *ngFor="let date of dates">{{date}} </span></h4>
-      </div>
+    <button mat-raised-button color="primary" [disabled]="dj.username == null" (click)="selectDJ()">Select</button>
+
     </div>
   </mat-card-content>
+</mat-card>
+<mat-card *ngIf="open == true">
+  <div fxFlex="50">
+    <h3 mat-card-subtitle>Selecting shift for: {{dj.name}} {{dj.last}}</h3>
+    <h4>Blocked dates:</h4>
+    <div *ngFor="let date of dates" style="color: red">{{date}} </div>
+  </div>
 </mat-card>
 
 <mat-card *ngIf="open == true">
@@ -48,7 +52,7 @@
              placeholder="Choose dates"
              [(ngModel)]="date"
              (dateInput)="date.getDay()"
-             [min]="minDate.getMonth() +1"
+             [min]="minDate"
              name="date" >
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
@@ -56,7 +60,7 @@
 
 
 
-    <button mat-button (click)="submitShift()" [disabled]="disable">Submit</button>
+    <button mat-button color="accent" (click)="submitShift()" [disabled]="disable">Submit</button>
 
   </mat-card-content>
 </mat-card>
