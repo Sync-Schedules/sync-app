@@ -1,4 +1,4 @@
-<div class="container" fxShow="true" fxFlex fxHide.lt-md>
+<div class="container" fxShow="true" fxFlex fxHide.lt-md fxLayout="column">
   <div class="example-header" fxLayout="row">
     <mat-form-field>
       <mat-icon matPrefix>search</mat-icon>
@@ -66,6 +66,10 @@
     </mat-table>
     <mat-paginator [pageSizeOptions]="[10, 25, 100]"></mat-paginator>
   </div>
+  <div>
+    <br />
+    <button mat-raised-button (click)="sendSchedule(user)">Send Email Notifications</button>
+  </div>
 </div>
 
 
@@ -100,4 +104,6 @@
     </mat-expansion-panel>
   </mat-accordion>
 </div>
+
+
 

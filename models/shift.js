@@ -26,6 +26,8 @@ const ShiftSchema = mongoose.Schema({
     },
 });
 
+ShiftSchema.index({ 'venue': 1, 'date': 1 }, { unique: true });
+
 const Shift = module.exports = mongoose.model('Shift', ShiftSchema);
 
 
