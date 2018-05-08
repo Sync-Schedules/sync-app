@@ -24,9 +24,13 @@ const ShiftSchema = mongoose.Schema({
     pending: {
         type: Boolean
     },
+    hasDJ: {
+        type: Boolean
+    }
 });
 
 const Shift = module.exports = mongoose.model('Shift', ShiftSchema);
+
 
 
 module.exports.addShift = function(newShift, callback){
@@ -45,3 +49,4 @@ module.exports.FindShiftByIdAndDelete = function (id, callback) {
 module.exports.FindVenueByIdAndUpdate = function (id, callback) {
     User.findOneAndUpdate(id, callback)
 };
+

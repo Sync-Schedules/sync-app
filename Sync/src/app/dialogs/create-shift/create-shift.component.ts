@@ -16,6 +16,7 @@ export class CreateShiftComponent implements OnInit {
   constructor(private us: UserService, private as: AuthService, private vs: VenueService, private snack:MatSnackBar, private dialog: MatDialog) { }
 
   dj: any;
+  hasDJ: boolean = false;
   venue: any;
   date: any;
   time:any;
@@ -82,25 +83,21 @@ export class CreateShiftComponent implements OnInit {
 
     let d = this.date.getDate();
 
-    function isBelow31(currentValue){
+    function matchesDate(currentValue){
       return currentValue !== d;
     }
-
-
-    console.log('every: ' + this.dj.availability.every(isBelow31));
-    console.log('yes');
-    console.log(this.date);
 
     this.shift = {
       venue: this.venue,
       date: this.date,
       time: this.time,
       dj: this.dj.username,
+      hasDJ: this.hasDJ = true
     } ;
 
 
 
-      if (this.dj.availability.every(isBelow31) !== true)
+      if (this.dj.availability.every(matchesDate) !== true)
       {
         this.errorMsg = true;
         this.snack.open("DJ is not available" , '',{duration: 2000})
@@ -122,20 +119,9 @@ export class CreateShiftComponent implements OnInit {
 
       }
 
-    // this.dialog.closeAll();
-  }
 
-  // myFilter = (d: Date): boolean => {
-  //   console.log(this.dj);
-  //   for(let i = 0; i<31;i++){
-  //     this.dates.push(this.dj.availability[i]);
-  //   }
-  //   const day = d.getDate();
-  //   console.log(this.dates);
-  //   return day !== 4 && day !==3
-  //
-  //
-  // }
+
+  }
 
 
 }

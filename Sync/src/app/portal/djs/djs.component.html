@@ -9,7 +9,7 @@
 </div>
 
 <div class="table-container">
-  <mat-table [dataSource]="dataSource" matSort>
+  <mat-table [dataSource]="dataSource" matSort (click)="ngOnInit()">
 
     <!--<ng-container matColumnDef="id">-->
     <!--<mat-header-cell *matHeaderCellDef mat-sort-header> ID </mat-header-cell>-->
