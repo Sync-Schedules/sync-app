@@ -40,14 +40,22 @@
       </ng-container>
 
 
+      <ng-container matColumnDef="pending">
+        <mat-header-cell *matHeaderCellDef mat-sort-header> Pending </mat-header-cell>
+        <mat-cell *matCellDef="let shift"><span *ngIf="shift.pending == true">(pending)</span></mat-cell>
+      </ng-container>
+
+
+
       <!--[Actions]-->
       <ng-container matColumnDef="actions">
         <mat-header-cell *matHeaderCellDef> Actions </mat-header-cell>
         <mat-cell *matCellDef="let shift">
           <div fxLayout="row">
-            <button mat-icon-button color="primary" *ngIf="user?.role === 'Manager'" (click)="addDJ(shift)"><mat-icon>account_circle</mat-icon></button>
+            <!--<button mat-icon-button color="primary" *ngIf="user?.role === 'Manager'" (click)="addDJ(shift)"><mat-icon>account_circle</mat-icon></button>-->
             <button mat-icon-button color="warn" *ngIf="user?.role === 'Manager' || user?.role === 'Admin'"(click)="DeleteShift(shift._id)"><mat-icon>delete</mat-icon></button>
-            <button mat-icon-button color="primary" *ngIf="user?.role === 'DJ'" (click)="dropShift(shift)"><mat-label>Drop</mat-label><mat-icon>redo</mat-icon></button>
+            <button mat-icon-button color="primary" *ngIf="user?.role === 'DJ'" (click)="requestDrop(shift)" [disabled]="shift.pending ==true"><mat-label>Drop</mat-label><mat-icon>redo</mat-icon>
+              </button>
           </div>
         </mat-cell>
       </ng-container>

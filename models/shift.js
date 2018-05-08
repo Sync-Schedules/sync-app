@@ -20,6 +20,9 @@ const ShiftSchema = mongoose.Schema({
     },
     dj: {
         type: String
+    },
+    pending: {
+        type: Boolean
     }
 });
 

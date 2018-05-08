@@ -28,7 +28,6 @@ export class CreateShiftComponent implements OnInit {
   minDate = new Date();
   errorMsg: boolean = false;
   disable: boolean = false;
-  blocked:number;
 
   ngOnInit() {
 
