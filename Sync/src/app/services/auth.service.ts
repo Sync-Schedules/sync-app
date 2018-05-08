@@ -103,6 +103,15 @@ export class AuthService {
       .map(res => res.json());
   }
 
+  // dropShift(id, body){
+  //   let headers = new Headers();
+  //   headers.append('Content-Type', 'application/json');
+  //   return this.http.put('http://localhost:3000/shifts/update/'+id,body,{headers:headers})
+  //   // return this.http.put('shifts/update/'+id,body,{headers:headers})
+  //     .map(res => res.json());
+  //
+  // }
+
   //DELETE
 
   deleteVenue(id){

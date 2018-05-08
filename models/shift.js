@@ -20,7 +20,10 @@ const ShiftSchema = mongoose.Schema({
     },
     dj: {
         type: String
-    }
+    },
+    pending: {
+        type: Boolean
+    },
 });
 
 const Shift = module.exports = mongoose.model('Shift', ShiftSchema);

@@ -31,6 +31,10 @@ const VenueSchema = mongoose.Schema({
     },
     time: {
         type: String
+    },
+    hasDJ: {
+        type: Boolean,
+
     }
 });
 

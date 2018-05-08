@@ -14,7 +14,8 @@ router.post('/register', (req, res, next) => {
         username: req.body.username,
         password: req.body.password,
         role: req.body.role,
-        availability: req.body.availability
+        availability: req.body.availability,
+        isWorking: req.body.isWorking
 
 
 

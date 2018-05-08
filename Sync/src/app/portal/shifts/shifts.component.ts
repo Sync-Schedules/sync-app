@@ -20,16 +20,18 @@ import {CreateShiftComponent} from "../../dialogs/create-shift/create-shift.comp
 })
 export class ShiftsComponent implements OnInit {
 
-  displayedColumns = ['venue', 'date', 'time', 'DJ','actions'];
+  displayedColumns = ['venue', 'date', 'time', 'DJ','actions','pending'];
   dataSource = new MatTableDataSource<Shift>();
   id: string;
   shift:any;
   venue: string;
   time: string;
-  date: string;
+  date = new Date().getDate();
   shifts =[];
   user: any;
   dj: string = '';
+
+  pending: boolean = false;
 
   constructor( public dialog: MatDialog,
                private us: UserService,
@@ -184,18 +186,18 @@ export class ShiftsComponent implements OnInit {
 
   }
 
-  dropShift(shift){
+  requestDrop(shift){
     this.shift = {
-      dj: this.dj
+      // dj: this.dj,
+      pending: this.pending = true
     };
     this.id = shift._id;
     this.as.updateShift(this.id, this.shift)
       .subscribe(data => {
         if (data.success){
-          this.snackBar.open(shift.dj + 'has dropped shift at '+ shift.venue
-            +'!' , 'Send Request');
+          this.snackBar.open(shift.dj + ' has requested to drop shift at '+ shift.venue, 'Send Request', {duration: 2000});
           this.dialog.closeAll();
-          this.sendRequest();
+          // this.sendRequest();
           this.ngOnInit();
         }
         else{
@@ -205,9 +207,6 @@ export class ShiftsComponent implements OnInit {
 
   }
 
-  sendRequest(){
-
-  }
 
 
 

@@ -1,10 +1,11 @@
-import {Component, EventEmitter, Input, OnInit, Output, SimpleChanges} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output, SimpleChanges, ViewChild} from '@angular/core';
 import {AuthService} from "../../services/auth.service";
 import * as moment from 'moment';
 import * as _ from 'lodash';
 import {CalendarDate} from "../../shared/sync-calendar/sync-calendar.component";
-import {MatDialog, MatSnackBar} from "@angular/material";
+import {MatDialog, MatPaginator, MatSnackBar, MatSort, MatTableDataSource} from "@angular/material";
 import {UserService} from "../../services/user.service";
+import {Shift} from "../../models/shift.model";
 // import {CalWeekComponent} from "../../dialogs/cal-week/cal-week.component";
 
 export interface Weekly {
@@ -31,7 +32,7 @@ export class PortalHomeComponent implements OnInit {
   dj: any;
   id: string;
   dayName = moment().format('dddd');
-  date = moment().format('MMM Do YY');
+  date = new Date().getDate();
   currentDate = moment();
 
   user: any;
@@ -40,17 +41,16 @@ export class PortalHomeComponent implements OnInit {
   dateClicked: any;
   dateClickedDay: any;
 
+  displayedColumns = ['venue', 'date', 'time', 'DJ','actions','pending'];
+  dataSource = new MatTableDataSource<Shift>();
+
   @Input() selectedDates: Weekly[] = [];
   @Output() onSelectDate = new EventEmitter<Weekly>();
 
 
   alert: boolean = false;
   emptyshifts = [];
-  shiftsv =[];
-  shiftst =[];
-  shiftsdt = [];
-  shiftsdj=[];
-  shifthd=['Venue', 'Time', 'Date', 'DJ'];
+
 
   daysOfWeek =[
     'Sunday',
@@ -63,7 +63,12 @@ export class PortalHomeComponent implements OnInit {
   ];
   constructor(private auth: AuthService, private dialog: MatDialog, private us: UserService, private snackBar: MatSnackBar) { }
 
+  @ViewChild(MatPaginator) paginator: MatPaginator;
+  @ViewChild(MatSort) sort: MatSort;
+
   ngOnInit() {
+
+    this.applyFilter('true');
 
     this.auth.getProfile().subscribe(profile => {
         this.user = profile.user;
@@ -81,23 +86,28 @@ export class PortalHomeComponent implements OnInit {
 
 
     this.us.getShifts().subscribe(data =>{
+
+      this.dataSource.data = data;
       this.shift = data;
-      for (let i=0; data.length; i++){
-        this.shiftsv.push(this.shift[i].venue);
-        this.shiftst.push(this.shift[i].time);
-        this.shiftsdt.push(this.shift[i].day);
-        this.shiftsdj.push(this.shift[i].dj);
-        if(this.shift[i].dj === ""){
-          this.emptyshifts.push(this.shift[i].venue + ' // ' + this.shift[i].day + ' // ' + this.shift[i].time);
-          this.alert = true;
-        }
-      }
+
+
 
       this.ngOnInit()
 
 
     });
 
+  }
+
+  ngAfterViewInit(){
+    this.dataSource.paginator = this.paginator;
+    this.dataSource.sort = this.sort;
+  }
+
+  applyFilter(filterValue: string) {
+    filterValue = filterValue.trim(); // Remove whitespace
+    filterValue = filterValue.toLowerCase(); // Datasource defaults to lowercase matches
+    this.dataSource.filter = filterValue;
   }
 
   ngOnChanges(changes: SimpleChanges): void {
@@ -176,14 +186,15 @@ export class PortalHomeComponent implements OnInit {
   pickUpShift(shift){
 
       this.shift = {
-        dj: this.user.username
+        dj: this.user.username,
+        pending: shift.pending = false
       };
       this.id = shift._id;
       this.auth.updateShift(this.id, this.shift)
         .subscribe(data => {
           if (data.success){
-            this.snackBar.open(shift.dj + 'has dropped shift at '+ shift.venue
-              +'!' , 'Send Request');
+            this.snackBar.open(shift.dj + ' picked up '+ shift.venue
+              +'!' , '', {duration: 300});
             this.ngOnInit();
           }
           else{

@@ -29,7 +29,11 @@ const UserSchema = mongoose.Schema({
         type: String,
         required: true
     },
-    availability: []
+    availability: [],
+    isWorking: {
+        type: Boolean,
+        required: false
+    }
 
 });
 

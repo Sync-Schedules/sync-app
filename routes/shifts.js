@@ -11,7 +11,8 @@ router.post('/createshift', (req, res, next) => {
         venue: req.body.venue,
         date: req.body.date,
         time: req.body.time,
-        dj: req.body.dj
+        dj: req.body.dj,
+        pending: req.body.pending
     });
 
     Shift.addShift(newShift, (err, shift) => {
