@@ -7,5 +7,6 @@ export interface User {
   // password: string;
   role: string;
   availability: [{Date}];
+  isWorking?: boolean
 
 }
