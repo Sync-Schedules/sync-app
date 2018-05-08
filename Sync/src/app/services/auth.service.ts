@@ -129,7 +129,9 @@ export class AuthService {
   }
 
   deleteShift(id){
-    return this.http.delete('http://localhost:3000/shifts/delete/'+id)
+    // return this.http.delete('http://localhost:3000/shifts/delete/'+id)
+    return this.http.delete('shifts/delete/'+id)
+
       .map(res => res.json());
   }
 
