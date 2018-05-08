@@ -23,7 +23,7 @@ const ShiftSchema = mongoose.Schema({
     },
     pending: {
         type: Boolean
-    }
+    },
 });
 
 const Shift = module.exports = mongoose.model('Shift', ShiftSchema);

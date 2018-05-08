@@ -6,4 +6,5 @@ export interface Venue {
   zip: string;
   phone: string;
   email:string;
+  hasDJ: boolean;
 }
