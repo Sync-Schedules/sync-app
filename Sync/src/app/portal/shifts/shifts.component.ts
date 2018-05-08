@@ -10,7 +10,7 @@ import {ConfirmDialogComponent} from "../../dialogs/delete-dialog/confirm-dialog
 import {EditUserComponent} from "../../dialogs/edit-user/edit-user.component";
 import {SelectDjComponent} from "../../dialogs/select-dj/select-dj.component";
 import {CreateShiftComponent} from "../../dialogs/create-shift/create-shift.component";
-
+import { MailerService } from "../../services/mailer.service";
 
 @Component({
   selector: 'app-shifts',
@@ -30,6 +30,7 @@ export class ShiftsComponent implements OnInit {
   shifts =[];
   user: any;
   dj: string = '';
+  mail: any;
 
   pending: boolean = false;
 
@@ -207,7 +208,31 @@ export class ShiftsComponent implements OnInit {
 
   }
 
+  sendSchedule(user) {
+      const mail = {
+          venue: this.venue,
+          date: this.date,
+          dj: this.dj,
+          time: this.time,
+        
+      };
+
+      console.log('!!!!MAILING!!!' + this.dj, this.date, this.dj);
+      this.mail.sendSchedule(mail).subscribe(data => {
+          // console.log(mail);
+          //
+          // if (data.success) {
+          //   this.snackBar.open('Email Sent', '', {duration: 3000});
+          //   this.dialog.closeAll();
+          //   console.log(mail);
+          // } else {
+          //   this.snackBar.open('Something went wrong', 'try again', {duration: 3000});
+          // }
+      });
+  }
+
+  }
+ 
 
 
 
-}

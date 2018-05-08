@@ -18,25 +18,13 @@ export class MailerService {
     return this.http.post('mailer/registration',body,{headers:headers})
 
   }
-  // sendEmail (name, email, message) {
-  //   fetch('http://localhost:3000/mailer/send', {
-  //     method: 'POST',
-  //     headers: {
-  //       'Accept': 'application/json',
-  //       'Content-Type': 'application/json'
-  //     },
-  //     body: JSON.stringify({
-  //       name: name,
-  //       email: email,
-  //       message: message
-  //     })
-  //   })
-  //     .then((res) => res.json())
-  //     .then((res) => {
-  //       console.log('here is the response: ', res);
-  //     })
-  //     .catch((err) => {
-  //       console.error('here is the error: ', err);
-  //     })
-  // }
+
+
+  sendSchedule(user) {
+      let data = { user };
+      let body = JSON.stringify(data);
+      let headers = new Headers();
+      headers.append('Content-Type', 'application/json');
+      return this.http.post('http://localhost:3000/mailer/sendSchedule', body, { headers: headers })
+  }
 }
