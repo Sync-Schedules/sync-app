@@ -1,4 +1,4 @@
 module.exports ={
-    database: 'mongodb://localhost:27017/sync',
+    database: 'mongodb://promero:123@ds259085.mlab.com:59085/sync-node',
     secret: 'yoursecret'
 };

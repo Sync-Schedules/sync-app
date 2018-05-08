@@ -6,7 +6,9 @@ import {Venue} from "../models/venue.model";
 @Injectable()
 export class VenueService {
 
-  private serviceUrl = 'http://localhost:3000/venues/venues';
+  // private serviceUrl = 'http://localhost:3000/venues/venues';
+  private serviceUrl = 'venues/venues';
+
 
   constructor(private http: HttpClient) { }
 

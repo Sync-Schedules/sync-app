@@ -14,7 +14,9 @@ export class MailerService {
     let body = JSON.stringify(data);
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this.http.post('http://localhost:3000/mailer/registration',body,{headers:headers})
+    // return this.http.post('http://localhost:3000/mailer/registration',body,{headers:headers})
+    return this.http.post('mailer/registration',body,{headers:headers})
+
   }
   // sendEmail (name, email, message) {
   //   fetch('http://localhost:3000/mailer/send', {

@@ -22,8 +22,8 @@ const shifts = require('./routes/shifts');
 const mailer = require('./routes/mailer');
 
 // Port Number
-const port = 3000; //(local)
-// const port = process.env.port || 8080; //(Heroku)
+// const port = 3000; //(local)
+const port = process.env.port || 8080; //(Heroku)
 
 // CORS Middleware
 app.use(cors());
@@ -43,17 +43,23 @@ require('./config/passport')(passport);
 app.use('/users', users);
 app.use('/venues', venues);
 app.use('/shifts', shifts);
-app.use('/mailer', mailer)
+app.use('/mailer', mailer);
 
 //View Engine
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
 
 // Index Route
-app.get('/', (req, res) => {
-    res.send('Invalid Endpoint');
-});
+// app.get('/', (req, res) => {
+//     res.send('Invalid Endpoint');
+// });
+app.get('*', (req,
+              res) => {
 
+    res.sendFile(path.join(__dirname,
+        'public/index.html'));
+
+});
 // Start Server
 app.listen(port, () => {
     console.log('Server started on port: '+port);
