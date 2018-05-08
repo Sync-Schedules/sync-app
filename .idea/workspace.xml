@@ -3,11 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d3d585c5-93ba-445d-a597-1cd8ea97aa3e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sync/src/app/services/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Sync/src/app/services/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sync/src/app/services/mailer.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Sync/src/app/services/mailer.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sync/src/app/services/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Sync/src/app/services/user.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Sync/src/app/services/venue.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/Sync/src/app/services/venue.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/mailer.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/mailer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,18 +24,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package-lock.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Sync/package-lock.json">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-153" />
+            <state relative-caret-position="306">
+              <caret line="21" column="42" lean-forward="true" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".angular-cli.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Sync/.angular-cli.json">
+      <file leaf-file-name="database.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/database.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="28" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+            <state relative-caret-position="51">
+              <caret line="3" column="2" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
             </state>
           </provider>
         </entry>
@@ -103,7 +101,7 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="venue.service.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="venue.service.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sync/src/app/services/venue.service.ts">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
@@ -139,9 +137,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/config/database.js" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/config/passport.js" />
         <option value="$PROJECT_DIR$/Sync/src/app/portal/availabilty/availabilty.component.html" />
         <option value="$PROJECT_DIR$/Sync/src/app/portal/availabilty/availabilty.component.ts" />
@@ -167,6 +163,8 @@
         <option value="$PROJECT_DIR$/Sync/src/app/services/mailer.service.ts" />
         <option value="$PROJECT_DIR$/Sync/src/app/services/user.service.ts" />
         <option value="$PROJECT_DIR$/Sync/src/app/services/venue.service.ts" />
+        <option value="$PROJECT_DIR$/config/database.js" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -212,6 +210,11 @@
             <path>
               <item name="sync-node" type="b2602c69:ProjectViewProjectNode" />
               <item name="sync-node" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="sync-node" type="b2602c69:ProjectViewProjectNode" />
+              <item name="sync-node" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="sync-node" type="b2602c69:ProjectViewProjectNode" />
@@ -577,7 +580,7 @@
       <workItem from="1520886282185" duration="10969000" />
       <workItem from="1521142421871" duration="84000" />
       <workItem from="1521274150391" duration="2624000" />
-      <workItem from="1525726070836" duration="26215000" />
+      <workItem from="1525726070836" duration="26614000" />
     </task>
     <task id="LOCAL-00001" summary="Merge origin/master">
       <created>1525728196878</created>
@@ -639,7 +642,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="57479000" />
+    <option name="totallyTimeSpent" value="57878000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -656,11 +659,11 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.36114043" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.36114043" />
       <window_info id="Capture Tool" order="2" />
       <window_info anchor="bottom" id="TypeScript" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26927084" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26927084" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.24963397" />
@@ -779,24 +782,10 @@
     <entry file="file://$PROJECT_DIR$/views/index.jade" />
     <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css" />
     <entry file="file://$PROJECT_DIR$/bin/www" />
-    <entry file="file://$PROJECT_DIR$/config/database.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="35" selection-start-line="1" selection-start-column="35" selection-end-line="1" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/bcryptjs/dist/bcrypt.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="213" column="33" selection-start-line="213" selection-start-column="33" selection-end-line="213" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="20" selection-end-line="59" selection-end-column="3" />
         </state>
       </provider>
     </entry>
@@ -1082,6 +1071,20 @@
           <folding>
             <element signature="e#0#43#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/database.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="2" lean-forward="true" selection-start-line="3" selection-start-column="2" selection-end-line="3" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="21" column="42" lean-forward="true" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
         </state>
       </provider>
     </entry>
