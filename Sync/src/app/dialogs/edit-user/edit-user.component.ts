@@ -16,7 +16,7 @@ export class EditUserComponent implements OnInit{
               @Inject(MAT_DIALOG_DATA)public data: any) {
   }
 
-  user:any[];
+  user:any;
   name: string;
   last: string;
   username: string;
