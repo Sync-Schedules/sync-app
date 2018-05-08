@@ -28,6 +28,7 @@ const Shift = module.exports = mongoose.model('Shift', ShiftSchema);
 
 module.exports.addShift = function(newShift, callback){
     newShift.save(callback);
+    ShiftSchema.in
 };
 
 module.exports.getShiftbyId = function(id, callback){

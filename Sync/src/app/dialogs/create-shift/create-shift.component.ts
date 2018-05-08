@@ -24,7 +24,7 @@ export class CreateShiftComponent implements OnInit {
   venues= [];
   dates=[];
   shift: any;
-  times= ['9:00' ,'10:00'];
+  times= ['9:00'];
   minDate = new Date();
   errorMsg: boolean = false;
   disable: boolean = false;
@@ -117,7 +117,7 @@ export class CreateShiftComponent implements OnInit {
               this.ngOnInit();
             }
             else{
-              this.snack.open('something went wrong', 'Oh no', {duration: 1000});
+              this.snack.open('Shift already exists!', 'Oh no', {duration: 1000});
             }
           })
 
