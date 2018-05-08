@@ -245,6 +245,7 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__dialogs_edit_shift_edit_shift_component__ = __webpack_require__("../../../../../src/app/dialogs/edit-shift/edit-shift.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__dialogs_create_shift_create_shift_component__ = __webpack_require__("../../../../../src/app/dialogs/create-shift/create-shift.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_60__services_mailer_service__ = __webpack_require__("../../../../../src/app/services/mailer.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_61__help_help_component__ = __webpack_require__("../../../../../src/app/help/help.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -316,6 +317,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var AppModule = (function () {
     function AppModule() {
     }
@@ -351,6 +353,7 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_56__dialogs_select_dj_select_dj_component__["a" /* SelectDjComponent */],
                 __WEBPACK_IMPORTED_MODULE_58__dialogs_edit_shift_edit_shift_component__["a" /* EditShiftComponent */],
                 __WEBPACK_IMPORTED_MODULE_59__dialogs_create_shift_create_shift_component__["a" /* CreateShiftComponent */],
+                __WEBPACK_IMPORTED_MODULE_61__help_help_component__["a" /* HelpComponent */],
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -1811,7 +1814,7 @@ var LoginComponent = (function () {
 /***/ "../../../../../src/app/navbar/navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<mat-toolbar scroll class=\"mat-elevation-z6\">\r\n  <span class=\"sync-logo\" fxLayout=\"row\" fxShow=\"true\" *ngIf=\"authService.loggedIn()\">\r\n    Sync\r\n    </span>\r\n\r\n  <span class=\"example-spacer\"></span>\r\n\r\n  <div class=\"nav-menu\" fxLayout=\"row\" fxLayoutAlign=\"space-evenly center\" fxShow=\"true\">\r\n    <button mat-icon-button class=\"menu\"[matMenuTriggerFor]=\"menu\"  *ngIf=\"authService.loggedIn()\">\r\n      <mat-icon>account_circle</mat-icon>\r\n    </button>\r\n  </div>\r\n</mat-toolbar>\r\n\r\n\r\n<mat-menu #menu=\"matMenu\" xPosition=\"after\">\r\n  <span mat-menu-item>\r\n    {{user?.name}}\r\n  </span>\r\n  <button mat-menu-item routerLink=\"../portal\">\r\n    <mat-icon>home</mat-icon>\r\n    <span>home</span>\r\n  </button>\r\n  <button mat-menu-item routerLink=\"../profile\">\r\n    <mat-icon>person</mat-icon>\r\n    <span>profile</span>\r\n  </button>\r\n  <button mat-menu-item (click)=\"onLogoutClick()\">\r\n    <mat-icon>exit_to_app</mat-icon>\r\n    <span>logout</span>\r\n  </button>\r\n  <button mat-menu-item routerLink=\"../help\">\r\n    <mat-icon>help</mat-icon>\r\n    <span routerLink=\"help\">help</span>\r\n  </button>\r\n</mat-menu>\r\n"
+module.exports = "<mat-toolbar scroll class=\"mat-elevation-z6\">\r\n  <span class=\"sync-logo\" fxLayout=\"row\" fxShow=\"true\" *ngIf=\"authService.loggedIn()\">\r\n    Sync\r\n    </span>\r\n\r\n  <span class=\"example-spacer\"></span>\r\n\r\n  <div class=\"nav-menu\" fxLayout=\"row\" fxLayoutAlign=\"space-evenly center\" fxShow=\"true\">\r\n    <button mat-icon-button class=\"menu\"[matMenuTriggerFor]=\"menu\"  *ngIf=\"authService.loggedIn()\">\r\n      <mat-icon>account_circle</mat-icon>\r\n    </button>\r\n  </div>\r\n</mat-toolbar>\r\n\r\n\r\n<mat-menu #menu=\"matMenu\" xPosition=\"after\">\r\n  <span mat-menu-item>\r\n    {{user?.name}}\r\n  </span>\r\n  <button mat-menu-item routerLink=\"../portal\">\r\n    <mat-icon>home</mat-icon>\r\n    <span>home</span>\r\n  </button>\r\n  <button mat-menu-item routerLink=\"../profile\">\r\n    <mat-icon>person</mat-icon>\r\n    <span>profile</span>\r\n  </button>\r\n  <button mat-menu-item (click)=\"onLogoutClick()\">\r\n    <mat-icon>exit_to_app</mat-icon>\r\n    <span>logout</span>\r\n  </button>\r\n  <button mat-menu-item routerLink=\"../help\">\r\n    <mat-icon>help</mat-icon>\r\n    <button mat-button routerLink=\"help\">help</button>\r\n  </button>\r\n</mat-menu>\r\n"
 
 /***/ }),
 
