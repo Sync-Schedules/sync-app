@@ -69,6 +69,7 @@ import {MatMomentDateModule} from "@angular/material-moment-adapter";
 import {EditShiftComponent} from "./dialogs/edit-shift/edit-shift.component";
 import { CreateShiftComponent } from './dialogs/create-shift/create-shift.component';
 import {MailerService} from "./services/mailer.service";
+import {HelpComponent} from "./help/help.component";
 
 @NgModule({
   declarations: [
@@ -102,7 +103,7 @@ import {MailerService} from "./services/mailer.service";
     EditShiftComponent,
     CreateShiftComponent,
 
-    // HelpComponent,
+    HelpComponent,
     // ResetPasswordComponent,
 
   ],
