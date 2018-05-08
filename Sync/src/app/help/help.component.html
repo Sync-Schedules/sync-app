@@ -1,62 +1,10 @@
-<div style="{margin-top: 20px}">
-<mat-tab-group>
-  <mat-tab label="Overview">
-    <mat-card fxLayout="column" fxLayoutAlign="center center">
-      <mat-card-header>
-        <h1>Overview</h1>
-      </mat-card-header>
-      <mat-card-content>
-        Sync has been created for Hank Air Management to support an efficient scheduling process.
-        <br>Sync is an application that will assist managers to release schedules in a more organized and timely manner. Djs will have the ability to submit their availabilities and managers will be able view all availabilities all on one platform.
-      </mat-card-content>
-    </mat-card>
-
-  </mat-tab>
-  <mat-tab label="login">
-    <h1>User Sign in and Login</h1>
-    Enter your Login Information given by your admin.
-    Enter your Username in the space labeled “Username”
-    Enter your Password in the space labeled “Password”
-    Click the Login Button
-
-  </mat-tab>
-
-  <mat-tab label="Manager" *ngIf="user?.role === 'Manager'">
-    <h1>Manager Instructions</h1>
-    <span>
-    A manager will create users’ accounts for all existing and new managers and Djs. They will have the capability to delete any manager or Dj accounts.
-
-      <br>A manager will also have the capability to create and manage schedules. They will also be able to accept and decline shift change requests from the Djs.
-     <br>1.1 Create User
-     <br>1.1.1 Once logged in, you will see the Manager Home Page
-     <br>1.1.2 When you click the Create User button, the Create Account screen opens, as shown below.
-
-     <br>1.2 Delete User
-     <br>1.2.1
-</span>
-
-
-
-    <br>2
-    <br> Manager Features
-    <br> A manager will have the capability to create and manage schedules. They will also be able to accept and decline shift change requests from the Djs.
-
-    <br>2.1 Create Schedule
-    <br>2.1.1
-    <br>2.2 Manage Schedule
-    <br>2.2.1
-    <br>2.3 Change Requests
-    <br>2.3.1 Accept
-    <br>2.3.2 Reject
-
-  </mat-tab>
-
-  <mat-tab label="Document">
-    <div>Download Document</div>
-    <div>
-    <a target="_blank" href="https://docs.google.com/document/d/1boqflauJAs5pIDVztuqul7EfbBJZif-_W8aDvquDlqI/edit#"><mat-icon>description</mat-icon></a>
-    </div>
-  </mat-tab>
-
-</mat-tab-group>
+<div fxLayout="column" fxLayoutAlign="center center" fxFlex>
+  <mat-card>
+    <mat-card-header>
+      <h1 mat-card-title>Find the user manual here!</h1>
+    </mat-card-header>
+    <mat-card-content>
+      <a href="https://docs.google.com/document/d/1boqflauJAs5pIDVztuqul7EfbBJZif-_W8aDvquDlqI"><button mat-icon-button><mat-icon>file_copy</mat-icon></button> </a>
+    </mat-card-content>
+  </mat-card>
 </div>
