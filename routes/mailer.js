@@ -84,20 +84,8 @@ router.post('/sendSchedule', function (req, res, next) {
         + '<div class="reg-box" style="max-width: 900px;margin: auto;padding: 30px;border:1px solid #eee; box-shadow: 0 0 10px rgba(0,0,0,.15)' +
         ';font-size: 16px;line-height: 24px;font-family: Roboto,sans-serif;">' +
         '<div fxLayout="column">' +
-        '<h1>Hello, </h1>' + req.body.user.name + ' ' + req.body.user.last +
-        '<h1>Your manager has created an account for you!</h1>' +
-        '<h2>Here is your information: </h2>' +
-        '<table>' +
-        '<tr>' +
-        '<td> Username: </td>' +
-        '<td>' + req.body.user.username + '</td>' +
-        '</tr>' +
-        '<tr>' +
-        '<td> Password: </td>' +
-        '<td>' + req.body.user.password + '</td>' +
-        '</tr>' +
-        '</table>' +
-        '<h2>Click here to log in and change your password</h2>' +
+        '<h1>Schedule is created, log in to see your schedule </h1>'
+        +
         '<a href="https://sync-schedules.herokuapp.com/login" style="padding: 16px;background-color: white;color: #0BA5DB; border: 2px solid #0BA5DB;text-decoration: none;">Change Password</a>' +
         '</div>' +
         '</div>'

@@ -238,6 +238,7 @@ var AppComponent = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_57_angular_calendar__ = __webpack_require__("../../../../angular-calendar/esm5/angular-calendar.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_58__dialogs_edit_shift_edit_shift_component__ = __webpack_require__("../../../../../src/app/dialogs/edit-shift/edit-shift.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_59__dialogs_create_shift_create_shift_component__ = __webpack_require__("../../../../../src/app/dialogs/create-shift/create-shift.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_60__services_mailer_service__ = __webpack_require__("../../../../../src/app/services/mailer.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -305,6 +306,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 // import { HelpComponent } from './help/help.component';
 // import { ResetPasswordComponent } from './reset-password/reset-password.component';
+
 
 
 
@@ -390,7 +392,8 @@ var AppModule = (function () {
                 __WEBPACK_IMPORTED_MODULE_39__guards_auth_guard__["a" /* AuthGuard */],
                 __WEBPACK_IMPORTED_MODULE_44__guards_admin_guard__["a" /* AdminGuard */],
                 __WEBPACK_IMPORTED_MODULE_40__services_user_service__["a" /* UserService */],
-                __WEBPACK_IMPORTED_MODULE_42_angular2_jwt__["JwtHelper"]
+                __WEBPACK_IMPORTED_MODULE_42_angular2_jwt__["JwtHelper"],
+                __WEBPACK_IMPORTED_MODULE_60__services_mailer_service__["a" /* MailerService */]
             ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_9__app_component__["a" /* AppComponent */]],
             entryComponents: [
@@ -2098,7 +2101,7 @@ var DjsComponent = (function () {
 /***/ "../../../../../src/app/portal/nav/nav.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<mat-toolbar class=\"portal-bar\" color=\"primary\" [ngStyle]=\"{'background-color': getColor(user?.role)}\"><span>{{user?.role}}</span></mat-toolbar>\r\n\r\n<mat-tab-group>\r\n  <mat-tab label=\"HOME\" *ngIf=\"user?.role === 'Manager' || user?.role === 'DJ'\"><app-portal-home></app-portal-home></mat-tab>\r\n  <mat-tab label=\"USERS\" *ngIf=\"user?.role === 'Admin'\"><usertable></usertable></mat-tab>\r\n  <mat-tab label=\"SCHEDULE\" *ngIf=\"user?.role === 'Manager' || user?.role === 'DJ'\"><app-schedule></app-schedule></mat-tab>\r\n  <mat-tab label=\"DJ AVAILABILITY\" *ngIf=\"user?.role === 'Manager'\"><view-avail></view-avail></mat-tab>\r\n  <mat-tab label=\"AVAILABILITY\" *ngIf=\"user?.role === 'DJ'\"><app-availabilty></app-availabilty> </mat-tab>\r\n  <!--<mat-tab label=\"CALENDAR\" *ngIf=\"user?.role === 'Manager'|| user?.role === 'DJ'\"><app-sync-calendar></app-sync-calendar> </mat-tab>-->\r\n  <mat-tab label=\"VENUES\" *ngIf=\"user?.role === 'Admin' || user?.role ==='Manager'\"><app-venue-data></app-venue-data> </mat-tab>\r\n  <mat-tab label=\"EMPLOYEES\" *ngIf=\"user?.role === 'Manager'\"><app-djs></app-djs> </mat-tab>\r\n  <mat-tab label=\"SHIFTS\" *ngIf=\"user?.role === 'Admin'\"><app-shifts></app-shifts></mat-tab>\r\n<!--<mat-tab label =\"cal2\"><app-table-cal></app-table-cal></mat-tab>-->\r\n\r\n\r\n</mat-tab-group>\r\n"
+module.exports = "<mat-toolbar class=\"portal-bar\" color=\"primary\" [ngStyle]=\"{'background-color': getColor(user?.role)}\"><span>{{user?.role}}</span></mat-toolbar>\r\n\r\n<mat-tab-group>\r\n  <!--<mat-tab label=\"HOME\" *ngIf=\"user?.role === 'Manager' || user?.role === 'DJ'\"><app-portal-home></app-portal-home></mat-tab>-->\r\n  <mat-tab label=\"USERS\" *ngIf=\"user?.role === 'Admin'\"><usertable></usertable></mat-tab>\r\n  <mat-tab label=\"SCHEDULE\" *ngIf=\"user?.role === 'Manager' || user?.role === 'DJ'\"><app-schedule></app-schedule></mat-tab>\r\n  <mat-tab label=\"DJ AVAILABILITY\" *ngIf=\"user?.role === 'Manager'\"><view-avail></view-avail></mat-tab>\r\n  <mat-tab label=\"AVAILABILITY\" *ngIf=\"user?.role === 'DJ'\"><app-availabilty></app-availabilty> </mat-tab>\r\n  <!--<mat-tab label=\"CALENDAR\" *ngIf=\"user?.role === 'Manager'|| user?.role === 'DJ'\"><app-sync-calendar></app-sync-calendar> </mat-tab>-->\r\n  <mat-tab label=\"VENUES\" *ngIf=\"user?.role === 'Admin' || user?.role ==='Manager'\"><app-venue-data></app-venue-data> </mat-tab>\r\n  <mat-tab label=\"EMPLOYEES\" *ngIf=\"user?.role === 'Manager'\"><app-djs></app-djs> </mat-tab>\r\n  <mat-tab label=\"SHIFTS\" *ngIf=\"user?.role === 'Admin'\"><app-shifts></app-shifts></mat-tab>\r\n<!--<mat-tab label =\"cal2\"><app-table-cal></app-table-cal></mat-tab>-->\r\n\r\n\r\n</mat-tab-group>\r\n"
 
 /***/ }),
 
@@ -2742,6 +2745,7 @@ module.exports = module.exports.toString();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__dialogs_edit_user_edit_user_component__ = __webpack_require__("../../../../../src/app/dialogs/edit-user/edit-user.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__dialogs_select_dj_select_dj_component__ = __webpack_require__("../../../../../src/app/dialogs/select-dj/select-dj.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__dialogs_create_shift_create_shift_component__ = __webpack_require__("../../../../../src/app/dialogs/create-shift/create-shift.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__services_mailer_service__ = __webpack_require__("../../../../../src/app/services/mailer.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2762,13 +2766,15 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var ShiftsComponent = (function () {
-    function ShiftsComponent(dialog, us, as, snackBar, router) {
+    function ShiftsComponent(dialog, us, as, snackBar, router, mailer) {
         this.dialog = dialog;
         this.us = us;
         this.as = as;
         this.snackBar = snackBar;
         this.router = router;
+        this.mailer = mailer;
         this.displayedColumns = ['venue', 'date', 'time', 'DJ', 'actions', 'pending'];
         this.dataSource = new __WEBPACK_IMPORTED_MODULE_2__angular_material__["t" /* MatTableDataSource */]();
         this.date = new Date().getDate();
@@ -2916,25 +2922,8 @@ var ShiftsComponent = (function () {
             }
         });
     };
-    ShiftsComponent.prototype.sendSchedule = function (user) {
-        var mail = {
-            venue: this.venue,
-            date: this.date,
-            dj: this.dj,
-            time: this.time,
-        };
-        console.log('!!!!MAILING!!!' + this.dj, this.date, this.dj);
-        this.mail.sendSchedule(mail).subscribe(function (data) {
-            // console.log(mail);
-            //
-            // if (data.success) {
-            //   this.snackBar.open('Email Sent', '', {duration: 3000});
-            //   this.dialog.closeAll();
-            //   console.log(mail);
-            // } else {
-            //   this.snackBar.open('Something went wrong', 'try again', {duration: 3000});
-            // }
-        });
+    ShiftsComponent.prototype.sendSchedule = function () {
+        this.mailer.sendSchedule();
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["ViewChild"])(__WEBPACK_IMPORTED_MODULE_2__angular_material__["l" /* MatPaginator */]),
@@ -2954,7 +2943,8 @@ var ShiftsComponent = (function () {
             __WEBPACK_IMPORTED_MODULE_4__services_user_service__["a" /* UserService */],
             __WEBPACK_IMPORTED_MODULE_5__services_auth_service__["a" /* AuthService */],
             __WEBPACK_IMPORTED_MODULE_2__angular_material__["p" /* MatSnackBar */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */]])
+            __WEBPACK_IMPORTED_MODULE_3__angular_router__["a" /* Router */],
+            __WEBPACK_IMPORTED_MODULE_11__services_mailer_service__["a" /* MailerService */]])
     ], ShiftsComponent);
     return ShiftsComponent;
 }());
@@ -3790,12 +3780,10 @@ var MailerService = (function () {
         // return this.http.post('http://localhost:3000/mailer/registration',body,{headers:headers})
         return this.http.post('mailer/registration', body, { headers: headers });
     };
-    MailerService.prototype.sendSchedule = function (user) {
-        var data = { user: user };
-        var body = JSON.stringify(data);
+    MailerService.prototype.sendSchedule = function () {
         var headers = new __WEBPACK_IMPORTED_MODULE_1__angular_http__["Headers"]();
         headers.append('Content-Type', 'application/json');
-        return this.http.post('http://localhost:3000/mailer/sendSchedule', body, { headers: headers });
+        return this.http.post('mailer/sendSchedule', { headers: headers });
     };
     MailerService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
