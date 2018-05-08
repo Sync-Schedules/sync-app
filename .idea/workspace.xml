@@ -54,11 +54,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Sync/src/app/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="157" column="17" selection-start-line="157" selection-start-column="17" selection-end-line="157" selection-end-column="17" />
+            <state relative-caret-position="467">
+              <caret line="105" column="15" lean-forward="true" selection-start-line="105" selection-start-column="15" selection-end-line="105" selection-end-column="15" />
               <folding>
                 <element signature="e#0#56#0" expanded="true" />
               </folding>
@@ -99,10 +99,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app-routing.module.ts" pinned="false" current-in-tab="true">
+      <file leaf-file-name="app-routing.module.ts" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sync/src/app/app-routing.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
+            <state relative-caret-position="714">
               <caret line="48" column="28" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
@@ -174,11 +174,11 @@
         <option value="$PROJECT_DIR$/Sync/src/app/portal/nav/nav.component.html" />
         <option value="$PROJECT_DIR$/Sync/src/app/services/mailer.service.ts" />
         <option value="$PROJECT_DIR$/Sync/src/app/portal/shifts/shifts.component.ts" />
-        <option value="$PROJECT_DIR$/Sync/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/routes/mailer.js" />
         <option value="$PROJECT_DIR$/Sync/src/app/help/help.component.html" />
         <option value="$PROJECT_DIR$/Sync/src/app/navbar/navbar.component.html" />
         <option value="$PROJECT_DIR$/Sync/src/app/app-routing.module.ts" />
+        <option value="$PROJECT_DIR$/Sync/src/app/app.module.ts" />
       </list>
     </option>
   </component>
@@ -442,7 +442,7 @@
       <workItem from="1521142421871" duration="84000" />
       <workItem from="1521274150391" duration="2624000" />
       <workItem from="1525726070836" duration="32195000" />
-      <workItem from="1525802124181" duration="4928000" />
+      <workItem from="1525802124181" duration="5192000" />
     </task>
     <task id="LOCAL-00001" summary="Merge origin/master">
       <created>1525728196878</created>
@@ -511,11 +511,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68387000" />
+    <option name="totallyTimeSpent" value="68651000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -891,16 +890,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Sync/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="157" column="17" selection-start-line="157" selection-start-column="17" selection-end-line="157" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#56#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routes/mailer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="923">
@@ -937,10 +926,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Sync/src/app/app-routing.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
+        <state relative-caret-position="714">
           <caret line="48" column="28" selection-start-line="48" selection-start-column="28" selection-end-line="48" selection-end-column="28" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sync/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="105" column="15" lean-forward="true" selection-start-line="105" selection-start-column="15" selection-end-line="105" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#56#0" expanded="true" />
           </folding>
         </state>
       </provider>
