@@ -30,12 +30,14 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_lazy_route_resource lazy re
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__portal_portal_component__ = __webpack_require__("../../../../../src/app/portal/portal.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__profile_profile_component__ = __webpack_require__("../../../../../src/app/profile/profile.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__portal_portal_home_portal_home_component__ = __webpack_require__("../../../../../src/app/portal/portal-home/portal-home.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__help_help_component__ = __webpack_require__("../../../../../src/app/help/help.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -73,6 +75,10 @@ var routes = [
     {
         path: 'profile',
         component: __WEBPACK_IMPORTED_MODULE_6__profile_profile_component__["a" /* ProfileComponent */],
+    },
+    {
+        path: 'help',
+        component: __WEBPACK_IMPORTED_MODULE_8__help_help_component__["a" /* HelpComponent */]
     }
 ];
 var AppRoutingModule = (function () {
@@ -1478,6 +1484,77 @@ var AuthGuard = (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/help/help.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div fxLayout=\"column\" fxLayoutAlign=\"center center\" fxFlex>\r\n  <mat-card>\r\n    <mat-card-header>\r\n      <h1 mat-card-title>Find the user manual here!</h1>\r\n    </mat-card-header>\r\n    <mat-card-content>\r\n      <a href=\"https://docs.google.com/document/d/1boqflauJAs5pIDVztuqul7EfbBJZif-_W8aDvquDlqI\"><button mat-icon-button><mat-icon>file_copy</mat-icon></button> </a>\r\n    </mat-card-content>\r\n  </mat-card>\r\n</div>\r\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/help/help.component.scss":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/help/help.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return HelpComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__services_auth_service__ = __webpack_require__("../../../../../src/app/services/auth.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var HelpComponent = (function () {
+    function HelpComponent(as) {
+        this.as = as;
+    }
+    HelpComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.as.getProfile().subscribe(function (profile) {
+            _this.user = profile.user;
+        }, function (err) {
+            console.log(err);
+            return false;
+        });
+    };
+    HelpComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
+            selector: 'app-help',
+            template: __webpack_require__("../../../../../src/app/help/help.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/help/help.component.scss")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__services_auth_service__["a" /* AuthService */]])
+    ], HelpComponent);
+    return HelpComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/home/home.component.html":
 /***/ (function(module, exports) {
 
@@ -1734,7 +1811,7 @@ var LoginComponent = (function () {
 /***/ "../../../../../src/app/navbar/navbar.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<mat-toolbar scroll class=\"mat-elevation-z6\">\r\n  <span class=\"sync-logo\" fxLayout=\"row\" fxShow=\"true\" *ngIf=\"authService.loggedIn()\">\r\n    Sync\r\n    </span>\r\n\r\n  <span class=\"example-spacer\"></span>\r\n\r\n  <div class=\"nav-menu\" fxLayout=\"row\" fxLayoutAlign=\"space-evenly center\" fxShow=\"true\">\r\n    <button mat-icon-button class=\"menu\"[matMenuTriggerFor]=\"menu\"  *ngIf=\"authService.loggedIn()\">\r\n      <mat-icon>account_circle</mat-icon>\r\n    </button>\r\n  </div>\r\n</mat-toolbar>\r\n\r\n\r\n<mat-menu #menu=\"matMenu\" xPosition=\"after\">\r\n  <span mat-menu-item>\r\n    {{user?.name}}\r\n  </span>\r\n  <button mat-menu-item routerLink=\"../portal\">\r\n    <mat-icon>home</mat-icon>\r\n    <span>home</span>\r\n  </button>\r\n  <button mat-menu-item routerLink=\"../profile\">\r\n    <mat-icon>person</mat-icon>\r\n    <span>profile</span>\r\n  </button>\r\n  <button mat-menu-item (click)=\"onLogoutClick()\">\r\n    <mat-icon>exit_to_app</mat-icon>\r\n    <span>logout</span>\r\n  </button>\r\n  <button mat-menu-item routerLink=\"../help\">\r\n    <mat-icon>help</mat-icon>\r\n    <span>help</span>\r\n  </button>\r\n</mat-menu>\r\n"
+module.exports = "<mat-toolbar scroll class=\"mat-elevation-z6\">\r\n  <span class=\"sync-logo\" fxLayout=\"row\" fxShow=\"true\" *ngIf=\"authService.loggedIn()\">\r\n    Sync\r\n    </span>\r\n\r\n  <span class=\"example-spacer\"></span>\r\n\r\n  <div class=\"nav-menu\" fxLayout=\"row\" fxLayoutAlign=\"space-evenly center\" fxShow=\"true\">\r\n    <button mat-icon-button class=\"menu\"[matMenuTriggerFor]=\"menu\"  *ngIf=\"authService.loggedIn()\">\r\n      <mat-icon>account_circle</mat-icon>\r\n    </button>\r\n  </div>\r\n</mat-toolbar>\r\n\r\n\r\n<mat-menu #menu=\"matMenu\" xPosition=\"after\">\r\n  <span mat-menu-item>\r\n    {{user?.name}}\r\n  </span>\r\n  <button mat-menu-item routerLink=\"../portal\">\r\n    <mat-icon>home</mat-icon>\r\n    <span>home</span>\r\n  </button>\r\n  <button mat-menu-item routerLink=\"../profile\">\r\n    <mat-icon>person</mat-icon>\r\n    <span>profile</span>\r\n  </button>\r\n  <button mat-menu-item (click)=\"onLogoutClick()\">\r\n    <mat-icon>exit_to_app</mat-icon>\r\n    <span>logout</span>\r\n  </button>\r\n  <button mat-menu-item routerLink=\"../help\">\r\n    <mat-icon>help</mat-icon>\r\n    <span routerLink=\"help\">help</span>\r\n  </button>\r\n</mat-menu>\r\n"
 
 /***/ }),
 
