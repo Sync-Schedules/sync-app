@@ -3,14 +3,14 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { EditVenueComponent } from './edit-venue.component';
 
 describe('EditVenueComponent', () => {
-  let component: EditVenueComponent;
-  let fixture: ComponentFixture<EditVenueComponent>;
+  let component : EditVenueComponent;
+  let fixture : ComponentFixture<EditVenueComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EditVenueComponent ]
+      declarations : [EditVenueComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

@@ -1,13 +1,15 @@
 @import "../../portal/portal-home/portal-home.component";
 
-.avail-card{
+.avail-card {
   width: 100%;
   //margin: 16px;
-  .mat-card-header{
+  .mat-card-header {
     font-weight: bolder;
   }
-  .day-avail{
+
+  .day-avail {
     width: auto;
+
     .day {
       width: 50%;
       font-size: 20px;
@@ -16,14 +18,15 @@
   }
 }
 
-.full-height{
+.full-height {
   height: 100%;
 }
-.all{
+
+.all {
   background-color: #3f51b5;
   color: white;
 }
 
-.example-spacer{
+.example-spacer {
   flex: 1 1 auto;
 }

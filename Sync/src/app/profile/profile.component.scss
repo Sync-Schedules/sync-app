@@ -1,45 +1,51 @@
 @import "../../styles.scss";
 
-.profile-content{
+.profile-content {
   width: auto;
   height: auto;
 }
 
-.Info-card{
+.Info-card {
   width: auto;
   height: auto;
   padding: 16px;
   //margin-bottom: 20px;
   margin-top: 20px;
-  .mat-raised-button{
+
+  .mat-raised-button {
     background-color: #0BA5DB;
     color: white;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
   }
-  .mat-toolbar{
+
+  .mat-toolbar {
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
   }
-  h1{
+
+  h1 {
     color: white;
     font-weight: bold;
   }
-  .profile-attribute{
+
+  .profile-attribute {
     width: auto;
-    .label{
+
+    .label {
       width: auto;
       background-color: #3f51b5;
       color: white;
-      border-bottom-right-radius: 0 ;
-      border-top-right-radius: 0 ;
+      border-bottom-right-radius: 0;
+      border-top-right-radius: 0;
     }
-    .info{
+
+    .info {
       width: 75%;
       font-weight: bold;
       font-size: 16px;
-      border-bottom-left-radius: 0 ;
-      border-top-left-radius: 0 ;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 0;
     }
   }
 }
@@ -49,22 +55,25 @@
   height: auto;
 }
 
-.portal-bar{
+.portal-bar {
   margin-top: 10px;
 }
 
-.preferences{
+.preferences {
   width: 100%
 }
 
-.avail-card{
+.avail-card {
   width: 500px;
   margin: 16px;
-  .mat-card-header{
+
+  .mat-card-header {
     font-weight: bolder;
   }
-  .day-avail{
+
+  .day-avail {
     width: auto;
+
     .day {
       width: 50%;
       font-size: 20px;
@@ -73,7 +82,7 @@
   }
 }
 
-.all{
+.all {
   background-color: #3f51b5;
   color: white;
 }

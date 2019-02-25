@@ -1,16 +1,16 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import {PortalHomeComponent} from "./portal-home.component";
+import { PortalHomeComponent } from "./portal-home.component";
 
 
 describe('HomeComponent', () => {
-  let component: PortalHomeComponent;
-  let fixture: ComponentFixture<PortalHomeComponent>;
+  let component : PortalHomeComponent;
+  let fixture : ComponentFixture<PortalHomeComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PortalHomeComponent ]
+      declarations : [PortalHomeComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

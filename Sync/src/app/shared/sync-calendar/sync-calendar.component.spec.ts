@@ -1,16 +1,16 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import  * as moment from 'moment';
-import {CalendarDate, SyncCalendarComponent} from './sync-calendar.component';
+import * as moment from 'moment';
+import { CalendarDate, SyncCalendarComponent } from './sync-calendar.component';
 
 describe('SyncCalendarComponent', () => {
-  let component: SyncCalendarComponent;
-  let fixture: ComponentFixture<SyncCalendarComponent>;
+  let component : SyncCalendarComponent;
+  let fixture : ComponentFixture<SyncCalendarComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SyncCalendarComponent ]
+      declarations : [SyncCalendarComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -20,12 +20,12 @@ describe('SyncCalendarComponent', () => {
   });
 
   describe('Select date', () => {
-    it ('should emit date when selected', () => {
-      let selectedDate: CalendarDate = {
-        selected: false,
-        today: false,
+    it('should emit date when selected', () => {
+      let selectedDate : CalendarDate = {
+        selected : false,
+        today : false,
         // inRange: false,
-        mDate: moment()
+        mDate : moment()
       };
       component.onSelectDate.subscribe(x => selectedDate = x);
       component.selectDate(selectedDate);

@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs/Observable";
-import {User} from "../models/user.model";
-import {Shift} from "../models/shift.model";
+import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs/Observable";
+import { User } from "../models/user.model";
+import { Shift } from "../models/shift.model";
 
 @Injectable()
 export class UserService {
@@ -13,22 +13,22 @@ export class UserService {
 
   private serviceUrl = 'users/users';
   private DjsURL = 'users/djs';
-  private shiftUrl='shifts/shifts';
+  private shiftUrl = 'shifts/shifts';
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http : HttpClient) {
+  }
 
 
-
-  getUser(): Observable<User[]> {
+  getUser() : Observable<User[]> {
     return this.http.get<User[]>(this.serviceUrl);
   }
 
-  getDJ(): Observable<User[]>{
+  getDJ() : Observable<User[]> {
     return this.http.get<User[]>(this.DjsURL);
   }
 
-  getShifts(): Observable<Shift[]>{
+  getShifts() : Observable<Shift[]> {
     return this.http.get<Shift[]>(this.shiftUrl);
   }
 }

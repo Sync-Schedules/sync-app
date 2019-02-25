@@ -1,12 +1,14 @@
 <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="20px">
   <form (submit)="onLoginSubmit()" class="example-form" fxLayoutGap="20px">
-    <div class="login-bar" fxLayout="row" fxLayoutGap="25px" fxLayoutAlign="center center" fxLayout.lt-md ="column">
+    <div class="login-bar" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign="center center" fxLayoutGap="25px">
       <mat-form-field fxFlex="40">
-    <input matInput type="text" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" placeholder="Username" required="required">
-  </mat-form-field>
+        <input [(ngModel)]="username" [ngModelOptions]="{standalone: true}" matInput placeholder="Username" required="required"
+               type="text">
+      </mat-form-field>
       <mat-form-field fxFlex="40">
-    <input matInput type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder="Password" required="required">
-  </mat-form-field>
+        <input [(ngModel)]="password" [ngModelOptions]="{standalone: true}" matInput placeholder="Password"
+               required="required" type="password">
+      </mat-form-field>
       <div>
         <button mat-raised-button type="submit" value="login">LOGIN</button>
       </div>

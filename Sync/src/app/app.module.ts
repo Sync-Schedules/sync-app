@@ -1,37 +1,44 @@
-import {BrowserModule} from '@angular/platform-browser';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {NgModule, ErrorHandler} from '@angular/core';
-import {FlexLayoutModule} from '@angular/flex-layout';
-import {FormBuilder, FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {HttpModule} from '@angular/http';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgModule } from '@angular/core';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import 'hammerjs';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/toPromise';
-import {AppComponent} from './app.component';
-import {AppRoutingModule} from './app-routing.module';
-import {DatePipe, CurrencyPipe} from '@angular/common';
-import {HTTP_INTERCEPTORS, HttpClientModule, HttpClient} from '@angular/common/http';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatExpansionModule} from '@angular/material/expansion';
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatExpansionModule } from '@angular/material/expansion';
 import {
-  MatDialogModule, MatSidenavModule, MatListModule, MatToolbarModule, MatIconModule,
-  MatNativeDateModule, MatTabsModule, MatPaginatorModule, MatSortModule, MatRadioModule
+  MatDialogModule,
+  MatIconModule,
+  MatListModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatRadioModule,
+  MatSidenavModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule
 } from '@angular/material';
-import {MatCardModule} from '@angular/material/card';
-import {MatStepperModule} from '@angular/material/stepper';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-import {MatInputModule} from '@angular/material/input';
-import {MatSelectModule} from '@angular/material/select';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatButtonModule} from '@angular/material/button';
-import {MatTooltipModule} from '@angular/material/tooltip';
-import {MatDatepickerModule} from '@angular/material/datepicker';
-import {MatSnackBarModule} from "@angular/material";
-import {MatSlideToggleModule} from '@angular/material/slide-toggle'
-import {MatButtonToggleModule} from '@angular/material/button-toggle';
-import {MatTableModule} from "@angular/material";
-import {LoginComponent} from './login/login.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatStepperModule } from '@angular/material/stepper';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatButtonModule } from '@angular/material/button';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle'
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { PortalComponent } from './portal/portal.component';
 import { LoginBarComponent } from './login/login-bar/login-bar.component';
@@ -42,37 +49,36 @@ import { ProfileComponent } from './profile/profile.component';
 import { VenueDataComponent } from './portal/venue-data/venue-data.component';
 import { AddVenueComponent } from './dialogs/add-venue/add-venue.component';
 import { ValidateService } from "./services/validate.service";
-import { AuthService} from "./services/auth.service";
-import { AuthGuard} from "./guards/auth.guard";
-import { UserService} from "./services/user.service";
+import { AuthService } from "./services/auth.service";
+import { AuthGuard } from "./guards/auth.guard";
+import { UserService } from "./services/user.service";
 import { AddUserComponent } from './dialogs/add-user/add-user.component';
-import {JwtHelper} from "angular2-jwt";
+import { JwtHelper } from "angular2-jwt";
 import { ConfirmDialogComponent } from './dialogs/delete-dialog/confirm-dialog.component';
-import {AdminGuard} from "./guards/admin.guard";
+import { AdminGuard } from "./guards/admin.guard";
 import { SyncCalendarComponent } from './shared/sync-calendar/sync-calendar.component';
 import { EditUserComponent } from './dialogs/edit-user/edit-user.component';
 import { NavComponent } from './portal/nav/nav.component';
 import { ScheduleComponent, ViewAvailability } from './portal/schedule/schedule.component';
 import { EditVenueComponent } from './dialogs/edit-venue/edit-venue.component';
-import { PortalHomeComponent} from "./portal/portal-home/portal-home.component";
+import { PortalHomeComponent } from "./portal/portal-home/portal-home.component";
 import { AddShiftComponent } from './dialogs/add-shift/add-shift.component';
-import {DjsComponent} from "./portal/djs/djs.component";
+import { DjsComponent } from "./portal/djs/djs.component";
 import { ShiftsComponent } from './portal/shifts/shifts.component';
-import { AvailabiltyComponent} from "./portal/availabilty/availabilty.component";
+import { AvailabiltyComponent } from "./portal/availabilty/availabilty.component";
 import { CalWeekComponent } from './shared/cal-week/cal-week.component';
 import { SelectDjComponent } from './dialogs/select-dj/select-dj.component';
 // import { HelpComponent } from './help/help.component';
 // import { ResetPasswordComponent } from './reset-password/reset-password.component';
 import { CalendarModule } from 'angular-calendar';
 // import {MasterCalendarModule} from "./master-calendar/master-calendar.module";
-import {MatMomentDateModule} from "@angular/material-moment-adapter";
-import {EditShiftComponent} from "./dialogs/edit-shift/edit-shift.component";
+import { EditShiftComponent } from "./dialogs/edit-shift/edit-shift.component";
 import { CreateShiftComponent } from './dialogs/create-shift/create-shift.component';
-import {MailerService} from "./services/mailer.service";
-import {HelpComponent} from "./help/help.component";
+import { MailerService } from "./services/mailer.service";
+import { HelpComponent } from "./help/help.component";
 
 @NgModule({
-  declarations: [
+  declarations : [
     AppComponent,
     LoginComponent,
     HomeComponent,
@@ -107,7 +113,7 @@ import {HelpComponent} from "./help/help.component";
     // ResetPasswordComponent,
 
   ],
-  imports: [
+  imports : [
     BrowserModule,
     AppRoutingModule,
     MatSidenavModule,
@@ -148,7 +154,7 @@ import {HelpComponent} from "./help/help.component";
     // MasterCalendarModule,
     // MatMomentDateModule
   ],
-  providers: [
+  providers : [
     FormBuilder,
     ValidateService,
     AuthService,
@@ -158,8 +164,8 @@ import {HelpComponent} from "./help/help.component";
     JwtHelper,
     MailerService
   ],
-  bootstrap: [AppComponent],
-  entryComponents: [
+  bootstrap : [AppComponent],
+  entryComponents : [
     AddVenueComponent,
     AddUserComponent,
     ConfirmDialogComponent,
@@ -170,4 +176,5 @@ import {HelpComponent} from "./help/help.component";
     CreateShiftComponent
   ]
 })
-export class AppModule { }
+export class AppModule {
+}

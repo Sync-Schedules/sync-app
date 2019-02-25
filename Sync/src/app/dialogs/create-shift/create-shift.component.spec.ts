@@ -3,14 +3,14 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CreateShiftComponent } from './create-shift.component';
 
 describe('CreateShiftComponent', () => {
-  let component: CreateShiftComponent;
-  let fixture: ComponentFixture<CreateShiftComponent>;
+  let component : CreateShiftComponent;
+  let fixture : ComponentFixture<CreateShiftComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CreateShiftComponent ]
+      declarations : [CreateShiftComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

@@ -1,12 +1,12 @@
 export interface User {
-  _id: string;
-  name: string;
-  last: string;
-  username: string;
-  email: string;
+  _id : string;
+  name : string;
+  last : string;
+  username : string;
+  email : string;
   // password: string;
-  role: string;
-  availability: [{Date}];
-  isWorking?: boolean
+  role : string;
+  availability : [{ Date }];
+  isWorking? : boolean
 
 }

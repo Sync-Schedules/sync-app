@@ -1,26 +1,24 @@
-
 <div class="calendar-container" fxLayout="row">
-  <div  fxFlex="50">
+  <div fxFlex="50">
     <mat-card class="card">
       <mat-card-content class="card-body">
         <ul>
           <li
             *ngFor="let event of externalEvents"
-            mwlDraggable
             [dropData]="{event: event}"
+            mwlDraggable
             style="position:relative; z-index: 10">
             <a
-              href="javascript:;"
-              [style.color]="event.color.primary">
+              [style.color]="event.color.primary"
+              href="javascript:">
               {{ event.title }}
             </a>
           </li>
         </ul>
       </mat-card-content>
     </mat-card>
-    </div>
-  <div  fxFlex="50">
-
+  </div>
+  <div fxFlex="50">
 
 
     <mat-card class="col-md-9">
@@ -31,26 +29,26 @@
 
       <div [ngSwitch]="view">
         <mwl-calendar-month-view
+          (eventTimesChanged)="eventDropped($event)"
           *ngSwitchCase="'month'"
-          [viewDate]="viewDate"
-          [events]="events"
           [activeDayIsOpen]="activeDayIsOpen"
+          [events]="events"
           [refresh]="refresh"
-          (eventTimesChanged)="eventDropped($event)">
+          [viewDate]="viewDate">
         </mwl-calendar-month-view>
         <mwl-calendar-week-view
+          (eventTimesChanged)="eventDropped($event)"
           *ngSwitchCase="'week'"
-          [viewDate]="viewDate"
           [events]="events"
           [refresh]="refresh"
-          (eventTimesChanged)="eventDropped($event)">
+          [viewDate]="viewDate">
         </mwl-calendar-week-view>
         <mwl-calendar-day-view
+          (eventTimesChanged)="eventDropped($event)"
           *ngSwitchCase="'day'"
-          [viewDate]="viewDate"
           [events]="events"
           [refresh]="refresh"
-          (eventTimesChanged)="eventDropped($event)">
+          [viewDate]="viewDate">
         </mwl-calendar-day-view>
       </div>
     </mat-card>

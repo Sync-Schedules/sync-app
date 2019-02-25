@@ -3,14 +3,14 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { AvailabiltyComponent } from './availabilty.component';
 
 describe('AvailabiltyComponent', () => {
-  let component: AvailabiltyComponent;
-  let fixture: ComponentFixture<AvailabiltyComponent>;
+  let component : AvailabiltyComponent;
+  let fixture : ComponentFixture<AvailabiltyComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AvailabiltyComponent ]
+      declarations : [AvailabiltyComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

@@ -1,18 +1,21 @@
 @import "../../../styles";
 
-.portalhome{
+.portalhome {
   height: 100vh;
   width: 95%;
-  h1{
+
+  h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
     font-weight: 200;
     color: #0BA5DB;
 
   }
-  .wrapper{
+
+  .wrapper {
     width: 100%;
-    .mat-card-title{
+
+    .mat-card-title {
       color: black;
       font-family: 'Roboto', sans-serif;
       font-size: 16px;
@@ -21,40 +24,44 @@
   }
 }
 
-.mat-sidenav{
+.mat-sidenav {
   width: 50%;
 }
 
-.portal-bar{
+.portal-bar {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 }
 
-.Info-card{
+.Info-card {
   width: auto;
   height: auto;
   //margin-bottom: 20px;
-  .mat-raised-button{
+  .mat-raised-button {
     background-color: #0BA5DB;
     color: white;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
   }
-  .mat-toolbar{
+
+  .mat-toolbar {
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     width: auto;
 
   }
-  .profile-attribute{
+
+  .profile-attribute {
     width: auto;
     background-color: whitesmoke;
+
     .date-text {
       padding: 0;
       width: 120px;
       height: 100px;
       font-size: 12px;
-      .mat-card-header{
+
+      .mat-card-header {
         font-family: Righteous, sans-serif;
         color: #3f51b5;
       }

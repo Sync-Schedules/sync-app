@@ -1,24 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import {AuthService} from "../services/auth.service";
-import {ValidateService} from "../services/validate.service";
-import {MatDialog, MatSnackBar} from "@angular/material";
-import {Router} from "@angular/router";
+import { AuthService } from "../services/auth.service";
+import { ValidateService } from "../services/validate.service";
+import { MatDialog, MatSnackBar } from "@angular/material";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-reset-password',
-  templateUrl: './reset-password.component.html',
-  styleUrls: ['./reset-password.component.scss']
+  selector : 'app-reset-password',
+  templateUrl : './reset-password.component.html',
+  styleUrls : ['./reset-password.component.scss']
 })
 export class ResetPasswordComponent implements OnInit {
 
-  constructor(private as: AuthService, private router:Router, private validateService: ValidateService, private snackBar: MatSnackBar, private dialog: MatDialog) {
-  }
+  user : any;
+  id : any;
+  password : any;
+  new_password : any;
+  password_check : any;
 
-  user: any;
-  id:any;
-  password: any;
-  new_password: any;
-  password_check: any
+  constructor(private as : AuthService, private router : Router, private validateService : ValidateService, private snackBar : MatSnackBar, private dialog : MatDialog) {
+  }
 
   ngOnInit() {
     this.as.getProfile().subscribe(profile => {
@@ -36,21 +36,20 @@ export class ResetPasswordComponent implements OnInit {
   onLoginSubmit() {
 
     const user = {
-      new_password: this.password,
+      new_password : this.password,
     };
     this.id = this.user.id;
 
-    console.log('ID: '+this.id);
+    console.log('ID: ' + this.id);
     console.log(user);
     //Register User
     this.as.updateUser(this.id, user)
       .subscribe(data => {
-        if (data.success){
-          this.snackBar.open('password has been changed!' , 'Cool', {duration: 2000});
+        if ( data.success ) {
+          this.snackBar.open('password has been changed!', 'Cool', { duration : 2000 });
           this.dialog.closeAll();
           this.router.navigate(['../portal'])
-        }
-        else{
+        } else {
           this.snackBar.open('something went wrong');
         }
       })

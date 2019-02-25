@@ -1,7 +1,7 @@
-export var userRole: String;
-export var userEmail: String;
-export var userId: String;
-export var roleType = function(role){
+export var userRole : String;
+export var userEmail : String;
+export var userId : String;
+export var roleType = function (role) {
   userRole = role;
 };
 
@@ -10,7 +10,7 @@ export var SetEmail = function (email) {
 };
 
 export var showNav = function () {
-  if (userRole === "admin" || userRole === "Admin"){
+  if ( userRole === "admin" || userRole === "Admin" ) {
     return true;
   } else {
     return false;
@@ -19,4 +19,4 @@ export var showNav = function () {
 
 export var setId = function (id) {
   userId = id;
-}
+};

@@ -3,14 +3,14 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { DemoUtilsComponent } from './demo-utils.component';
 
 describe('DemoUtilsComponent', () => {
-  let component: DemoUtilsComponent;
-  let fixture: ComponentFixture<DemoUtilsComponent>;
+  let component : DemoUtilsComponent;
+  let fixture : ComponentFixture<DemoUtilsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DemoUtilsComponent ]
+      declarations : [DemoUtilsComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

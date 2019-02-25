@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs/Observable";
-import {Venue} from "../models/venue.model";
+import { HttpClient } from "@angular/common/http";
+import { Observable } from "rxjs/Observable";
+import { Venue } from "../models/venue.model";
 
 @Injectable()
 export class VenueService {
@@ -10,9 +10,10 @@ export class VenueService {
   private serviceUrl = 'venues/venues';
 
 
-  constructor(private http: HttpClient) { }
+  constructor(private http : HttpClient) {
+  }
 
-  getVenue(): Observable<Venue[]> {
+  getVenue() : Observable<Venue[]> {
     return this.http.get<Venue[]>(this.serviceUrl);
   }
 

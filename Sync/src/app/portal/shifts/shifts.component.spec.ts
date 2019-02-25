@@ -3,14 +3,14 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ShiftsComponent } from './shifts.component';
 
 describe('ShiftsComponent', () => {
-  let component: ShiftsComponent;
-  let fixture: ComponentFixture<ShiftsComponent>;
+  let component : ShiftsComponent;
+  let fixture : ComponentFixture<ShiftsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ShiftsComponent ]
+      declarations : [ShiftsComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

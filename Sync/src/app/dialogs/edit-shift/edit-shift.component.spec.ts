@@ -3,14 +3,14 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { EditShiftComponent } from './edit-shift.component';
 
 describe('EditShiftComponent', () => {
-  let component: EditShiftComponent;
-  let fixture: ComponentFixture<EditShiftComponent>;
+  let component : EditShiftComponent;
+  let fixture : ComponentFixture<EditShiftComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EditShiftComponent ]
+      declarations : [EditShiftComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

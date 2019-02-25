@@ -1,7 +1,7 @@
 import { AppPage } from './app.po';
 
 describe('prestige-schedules-ag App', () => {
-  let page: AppPage;
+  let page : AppPage;
 
   beforeEach(() => {
     page = new AppPage();

@@ -1,12 +1,12 @@
-<mat-toolbar scroll class="mat-elevation-z6">
-  <span class="sync-logo" fxLayout="row" fxShow="true" *ngIf="authService.loggedIn()">
+<mat-toolbar class="mat-elevation-z6" scroll color="primary">
+  <span class="sync-logo" fxLayout="row" fxShow="true">
     Sync
-    </span>
+  </span>
 
   <span class="example-spacer"></span>
 
   <div class="nav-menu" fxLayout="row" fxLayoutAlign="space-evenly center" fxShow="true">
-    <button mat-icon-button class="menu"[matMenuTriggerFor]="menu"  *ngIf="authService.loggedIn()">
+    <button *ngIf="authService.loggedIn()" [matMenuTriggerFor]="menu" class="menu" mat-icon-button>
       <mat-icon>account_circle</mat-icon>
     </button>
   </div>

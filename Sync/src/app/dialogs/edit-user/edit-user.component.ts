@@ -1,45 +1,42 @@
-import {Component, Inject, OnInit} from '@angular/core';
-import { AuthService} from "../../services/auth.service";
-import {MAT_DIALOG_DATA, MatDialog, MatDialogRef, MatSnackBar} from "@angular/material";
+import { Component, Inject, OnInit } from '@angular/core';
+import { AuthService } from "../../services/auth.service";
+import { MAT_DIALOG_DATA, MatDialog, MatDialogRef, MatSnackBar } from "@angular/material";
 
 @Component({
-  selector: 'app-edit-user',
-  templateUrl: './edit-user.component.html',
-  styleUrls: ['./edit-user.component.scss']
+  selector : 'app-edit-user',
+  templateUrl : './edit-user.component.html',
+  styleUrls : ['./edit-user.component.scss']
 })
-export class EditUserComponent implements OnInit{
+export class EditUserComponent implements OnInit {
 
-  constructor(private as: AuthService,
-              private snackBar: MatSnackBar,
-              public dialog: MatDialog,
-              public dialogRef: MatDialogRef<EditUserComponent>,
-              @Inject(MAT_DIALOG_DATA)public data: any) {
+  user : any;
+  name : string;
+  last : string;
+  username : string;
+  email : string;
+  role : string;
+  password : any;
+  open : boolean = false;
+  _id : string;
+  roles = [
+    { value : 'Admin', viewValue : 'Admin' },
+    { value : 'Manager', viewValue : 'Manager' },
+    { value : 'DJ', viewValue : 'DJ' }
+  ];
+  managerViewRoles = [
+    { value : 'Manager', viewValue : 'Manager' },
+    { value : 'DJ', viewValue : 'DJ' }
+  ];
+
+  constructor(private as : AuthService,
+              private snackBar : MatSnackBar,
+              public dialog : MatDialog,
+              public dialogRef : MatDialogRef<EditUserComponent>,
+              @Inject(MAT_DIALOG_DATA) public data : any) {
   }
 
-  user:any;
-  name: string;
-  last: string;
-  username: string;
-  email: string;
-  role: string;
-  password: any;
-  open: boolean = false;
-  _id: string;
-
-
-  roles = [
-    {value: 'Admin', viewValue: 'Admin'},
-    {value: 'Manager', viewValue: 'Manager'},
-    {value: 'DJ', viewValue: 'DJ'}
-  ];
-
-  managerViewRoles = [
-    {value: 'Manager', viewValue: 'Manager'},
-    {value: 'DJ', viewValue: 'DJ'}
-  ];
-
   changePassword() {
-  this.open = true;
+    this.open = true;
   }
 
   ngOnInit() {
@@ -47,10 +44,11 @@ export class EditUserComponent implements OnInit{
     this.as.getProfile().subscribe(profile => {
         this.user = profile.user;
       },
-      err =>{
+      err => {
         console.log(err);
         return false;
-      });  }
+      });
+  }
 
   // onEditSubmit(_id){
   //   this.as.updateUser(_id)

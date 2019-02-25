@@ -3,14 +3,14 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { CalWeekComponent } from './cal-week.component';
 
 describe('CalWeekComponent', () => {
-  let component: CalWeekComponent;
-  let fixture: ComponentFixture<CalWeekComponent>;
+  let component : CalWeekComponent;
+  let fixture : ComponentFixture<CalWeekComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CalWeekComponent ]
+      declarations : [CalWeekComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

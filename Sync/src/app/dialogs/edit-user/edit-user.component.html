@@ -1,48 +1,49 @@
-<form  class="example-form" fxLayout="column"  fxLayoutGap="20px">
+<form class="example-form" fxLayout="column" fxLayoutGap="20px">
   <h1 mat-dialog-title>Edit User</h1>
   <mat-dialog-content fxLayout="column" fxLayoutAlign="center">
     <mat-form-field class="example-full-width">
-      <input matInput  [(ngModel)]="data.name"  placeholder="Name"  name="first" value="{{data.name}}">
+      <input [(ngModel)]="data.name" matInput name="first" placeholder="Name" value="{{data.name}}">
     </mat-form-field>
     <mat-form-field class="example-full-width">
-      <input matInput type="text" [(ngModel)]="data.last"  placeholder="Last" name="last" value="{{data.last}}">
+      <input [(ngModel)]="data.last" matInput name="last" placeholder="Last" type="text" value="{{data.last}}">
     </mat-form-field>
 
     <mat-form-field class="example-full-width">
-      <input matInput type="text" [(ngModel)]="data.username"  placeholder="username"  name="user" value="{{data.username}}">
+      <input [(ngModel)]="data.username" matInput name="user" placeholder="username" type="text"
+             value="{{data.username}}">
     </mat-form-field>
 
     <mat-form-field class="example-full-width">
-      <input matInput type="email" [(ngModel)]="data.email"  placeholder="email" name="email" value="{{data.email}}">
+      <input [(ngModel)]="data.email" matInput name="email" placeholder="email" type="email" value="{{data.email}}">
     </mat-form-field>
 
-    <mat-form-field class="example-full-width" *ngIf="user?.role === 'Admin'" >
-      <mat-select placeholder="Select a role" [(ngModel)]="data.role" name="role">
+    <mat-form-field *ngIf="user?.role === 'Admin'" class="example-full-width">
+      <mat-select [(ngModel)]="data.role" name="role" placeholder="Select a role">
         <mat-option *ngFor="let role of roles" [value]="role.value">
           {{role.viewValue}}
         </mat-option>
       </mat-select>
     </mat-form-field>
 
-    <mat-form-field class="example-full-width" *ngIf="user?.role === 'Manager'" >
-      <mat-select placeholder="Select a role" [(ngModel)]="role" name="role" required="required">
-        <mat-option [value]="user?.role" *ngIf="user?.role === 'DJ'">{{user.role}}</mat-option>
+    <mat-form-field *ngIf="user?.role === 'Manager'" class="example-full-width">
+      <mat-select [(ngModel)]="role" name="role" placeholder="Select a role" required="required">
+        <mat-option *ngIf="user?.role === 'DJ'" [value]="user?.role">{{user.role}}</mat-option>
         <mat-option *ngFor="let role of managerViewRoles" [value]="role.value">
           {{role.viewValue}}
         </mat-option>
       </mat-select>
     </mat-form-field>
 
-    <button mat-button (click)="changePassword()">Change password</button>
+    <button (click)="changePassword()" mat-button>Change password</button>
 
-    <mat-form-field class="example-full-width" *ngIf="open == true" >
-      <input matInput type="text" [value]="data.password" [(ngModel)] = "data.password" placeholder="password">
+    <mat-form-field *ngIf="open == true" class="example-full-width">
+      <input [(ngModel)]="data.password" [value]="data.password" matInput placeholder="password" type="text">
     </mat-form-field>
 
   </mat-dialog-content>
   <mat-dialog-actions fxLayoutAlign="center center">
-    <button mat-raised-button type="submit" [mat-dialog-close]="data">Submit</button>
-    <button mat-raised-button  mat-dialog-close type="button">Cancel</button>
+    <button [mat-dialog-close]="data" mat-raised-button type="submit">Submit</button>
+    <button mat-dialog-close mat-raised-button type="button">Cancel</button>
   </mat-dialog-actions>
 </form>
 

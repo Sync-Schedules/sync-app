@@ -3,14 +3,14 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { DjsComponent } from './djs.component';
 
 describe('DjsComponent', () => {
-  let component: DjsComponent;
-  let fixture: ComponentFixture<DjsComponent>;
+  let component : DjsComponent;
+  let fixture : ComponentFixture<DjsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DjsComponent ]
+      declarations : [DjsComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

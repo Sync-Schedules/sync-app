@@ -1,29 +1,33 @@
-
-<mat-card class="example-form" fxLayoutAlign="center center" fxLayout="column">
+<mat-card class="example-form" fxLayout="column" fxLayoutAlign="center center">
   <mat-card-header><h1>Register</h1></mat-card-header>
   <mat-card-content>
     <form (submit)="onRegisterSubmit()" class="example-form" fxLayoutGap="20px">
       <mat-form-field class="example-full-width">
-        <input matInput type="text" [(ngModel)]="name" [ngModelOptions]="{standalone: true}"  placeholder="Name" required="required">
+        <input [(ngModel)]="name" [ngModelOptions]="{standalone: true}" matInput placeholder="Name" required="required"
+               type="text">
       </mat-form-field>
       <mat-form-field class="example-full-width">
-        <input matInput type="text" [(ngModel)]="last" [ngModelOptions]="{standalone: true}"  placeholder="Last" required="required">
-      </mat-form-field>
-
-      <mat-form-field class="example-full-width">
-        <input matInput type="text" [(ngModel)]="username" [ngModelOptions]="{standalone: true}"  placeholder="Username" required="required">
+        <input [(ngModel)]="last" [ngModelOptions]="{standalone: true}" matInput placeholder="Last" required="required"
+               type="text">
       </mat-form-field>
 
       <mat-form-field class="example-full-width">
-        <input matInput type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" placeholder="Email" required="required">
+        <input [(ngModel)]="username" [ngModelOptions]="{standalone: true}" matInput placeholder="Username" required="required"
+               type="text">
       </mat-form-field>
 
       <mat-form-field class="example-full-width">
-        <input matInput type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" placeholder="Password" required="required">
+        <input [(ngModel)]="email" [ngModelOptions]="{standalone: true}" matInput placeholder="Email" required="required"
+               type="email">
       </mat-form-field>
 
       <mat-form-field class="example-full-width">
-        <mat-select placeholder="Select a role" [(ngModel)]="role" name="role">
+        <input [(ngModel)]="password" [ngModelOptions]="{standalone: true}" matInput placeholder="Password"
+               required="required" type="password">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-select [(ngModel)]="role" name="role" placeholder="Select a role">
           <mat-option *ngFor="let role of roles" [value]="role.value">
             {{role.viewValue}}
           </mat-option>
@@ -37,7 +41,7 @@
 
     </form>
   </mat-card-content>
-    <div fxLayoutAlign="center center">
-    <a routerLink="login" class="cancel">cancel</a>
-    </div>
+  <div fxLayoutAlign="center center">
+    <a class="cancel" routerLink="login">cancel</a>
+  </div>
 </mat-card>

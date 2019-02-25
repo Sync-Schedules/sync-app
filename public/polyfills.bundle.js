@@ -49,15 +49,15 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /** Evergreen browsers require these. **/
 // Used for reflect-metadata in JIT. If you use AOT (and only Angular decorators), you can remove.
 
+/***************************************************************************************************
+ * Zone JS is required by Angular itself.
+ */
+ // Included with Angular CLI.
 /**
  * Required to support Web Animations `@angular/platform-browser/animations`.
  * Needed for: All but Chrome, Firefox and Opera. http://caniuse.com/#feat=web-animation
  **/
 // import 'web-animations-js';  // Run `npm install --save web-animations-js`.
-/***************************************************************************************************
- * Zone JS is required by Angular itself.
- */
- // Included with Angular CLI.
 /***************************************************************************************************
  * APPLICATION IMPORTS
  */

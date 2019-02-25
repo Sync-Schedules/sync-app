@@ -2,58 +2,63 @@
 
 $width: 100%;
 
-  h1{
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: 200;
+  color: #0BA5DB;
+
+}
+
+.wrapper {
+  width: 100%;
+
+  .mat-card-title {
+    color: black;
     font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    font-weight: 200;
-    color: #0BA5DB;
-
+    font-size: 16px;
+    font-weight: 500;
   }
-  .wrapper{
-    width: 100%;
-    .mat-card-title{
-      color: black;
-      font-family: 'Roboto', sans-serif;
-      font-size: 16px;
-      font-weight: 500;
-    }
-  }
+}
 
 
-.mat-sidenav{
+.mat-sidenav {
   width: 50%;
 }
 
-.portal-bar{
+.portal-bar {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
 }
 
-.Info-card{
+.Info-card {
   width: auto;
   height: auto;
   //margin-bottom: 20px;
-  .mat-raised-button{
+  .mat-raised-button {
     background-color: #0BA5DB;
     color: white;
     border-top-right-radius: 0;
     border-top-left-radius: 0;
   }
-  .mat-toolbar{
+
+  .mat-toolbar {
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     width: auto;
 
   }
-  h1{
+
+  h1 {
     color: white;
     font-weight: bold;
   }
-  .profile-attribute{
+
+  .profile-attribute {
     width: auto;
     background-color: whitesmoke;
 
-    .daynames{
+    .daynames {
       height: auto;
       width: 100%;
       font-size: 18px;
@@ -62,6 +67,7 @@ $width: 100%;
       font-family: Roboto, "Helvetica Neue", sans-serif;
       border-radius: 0;
     }
+
     .date-text {
       padding: 0;
       width: 100%;
@@ -69,7 +75,7 @@ $width: 100%;
       font-size: 14px;
 
 
-      .mat-card-header{
+      .mat-card-header {
         font-family: Righteous, sans-serif;
         color: #3f51b5;
       }
@@ -79,16 +85,16 @@ $width: 100%;
 }
 
 
-
-.week-date{
+.week-date {
   width: 100%;
-  .disabled{
+
+  .disabled {
     color: #777777;
     font-family: Righteous, sans-serif;
   }
 }
 
-.week, .weeks{
+.week, .weeks {
   margin-top: 20px;
   width: 100%;
 }

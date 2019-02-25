@@ -5,10 +5,12 @@
   width: 75%;
   height: 100%;
   border-radius: 5px;
-  form{
-    .mat-form-field{
+
+  form {
+    .mat-form-field {
       width: 50%;
     }
+
     .mat-raised-button {
       color: white;
       font-weight: 300;
@@ -18,12 +20,12 @@
       box-shadow: #eeeeee;
       border-radius: 4px;
       width: 85%;
-  }
+    }
   }
 }
 
 
-.sync-logo{
+.sync-logo {
   font-family: Righteous, sans-serif;
   font-weight: bold;
   font-size: 48px;

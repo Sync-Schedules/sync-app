@@ -1,5 +1,4 @@
-
-<mat-card fxLayoutAlign="center center" fxLayout="column">
+<mat-card fxLayout="column" fxLayoutAlign="center center">
   <mat-card-header>
     <h1 mat-card-title>Select a DJ</h1>
   </mat-card-header>
@@ -15,7 +14,7 @@
     </div>
 
     <mat-form-field class="example-full-width">
-      <mat-select placeholder="Select a role" [(ngModel)]="data.dj">
+      <mat-select [(ngModel)]="data.dj" placeholder="Select a role">
         <mat-option value="">(none)</mat-option>
         <mat-option *ngFor="let dj of djs" [value]="dj">
           {{dj}}
@@ -26,6 +25,6 @@
 
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button type="submit" [mat-dialog-close]="data">Choose</button>
+    <button [mat-dialog-close]="data" mat-raised-button type="submit">Choose</button>
   </mat-card-actions>
 </mat-card>
